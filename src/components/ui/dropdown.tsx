@@ -1,0 +1,42 @@
+import { useState } from "react";
+import Link from "next/link";
+
+export default function Dropdown({ options, children }: { options: { href: string, label: string }[], children: React.ReactNode }) {
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    return (
+        <div className="relative">
+            <button
+                type="button"
+                onClick={() => setIsDropdownOpen((prev) => !prev)}
+                className="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1 cursor-pointer"
+                aria-expanded={isDropdownOpen}
+            >
+                {children}
+                <svg
+                    className={`w-3.5 h-3.5 transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+
+            {isDropdownOpen && (
+                <ul className="absolute top-full left-0 mt-2 min-w-44 rounded-md border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-lg py-1.5 z-50 flex flex-col">
+                    {options.map((option, index) => (
+                        <li key={index}>
+                            <Link
+                                href={option.href}
+                                onClick={() => setIsDropdownOpen(false)}
+                                className="block px-4 py-2 text-sm text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+                            >
+                                {option.label}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            )}
+        </div>
+    );
+}
