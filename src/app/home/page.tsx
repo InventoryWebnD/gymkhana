@@ -1,15 +1,11 @@
 "use client";
 
-import TopBar from "@/components/layout/topbar";
 import { Carousel, CarouselItem } from "@/components/layout/Carousel";
 import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
     <div className="min-h-screen w-full flex flex-col justify-between bg-white dark:bg-black text-neutral-800 dark:text-neutral-200">
-      {/* Top Navigation */}
-      <TopBar />
-
       {/* Hero Carousel */}
       <div className="relative w-full h-[50vh] min-h-[380px] md:h-[65vh] lg:h-[75vh]">
         <Carousel autoSwipeInterval={5000}>
