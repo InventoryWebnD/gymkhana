@@ -1,6 +1,7 @@
 "use client";
 import TopBar from "@/components/layout/topbar";
 import { Carousel, CarouselItem } from "@/components/layout/Carousel";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
