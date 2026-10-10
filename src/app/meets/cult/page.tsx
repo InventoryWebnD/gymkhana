@@ -1,12 +1,12 @@
 "use client";
 
-import MeetCarousel from "@/components/layout/MeetCarousel";
+import CommonCarousel from "@/components/layout/CommonCarousel";
 
 export default function cultCouncil() {
   return (
     <main className="h-dvh w-full overflow-hidden">
-      <MeetCarousel
-        meetName="INTER IIT TECH MEET COMING SOON"
+      <CommonCarousel
+        commonName="INTER IIT TECH MEET COMING SOON"
         heightClassName="h-dvh min-h-screen"
         images={[
           "/img/cult-carousel/3.jpg",

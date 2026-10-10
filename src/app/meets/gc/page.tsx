@@ -1,12 +1,12 @@
 "use client";
 
-import MeetCarousel from "@/components/layout/MeetCarousel";
+import CommonCarousel from "@/components/layout/CommonCarousel";
 
 export default function gcMeet() {
   return (
     <main className="h-dvh w-full overflow-hidden">
-      <MeetCarousel
-        meetName="GENERAL CHAMPIONSHIP"
+      <CommonCarousel
+        commonName="GENERAL CHAMPIONSHIP"
         heightClassName="h-dvh min-h-screen"
         images={[
           "/img/gc-carousel/gc1.jpg",
