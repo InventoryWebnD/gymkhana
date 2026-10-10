@@ -5,7 +5,7 @@ import { Carousel, CarouselItem } from "@/components/layout/Carousel";
 export default function Home() {
   return (
     <main className="min-h-screen w-full flex flex-col">
-      <TopBar />
+      {/* <TopBar /> */}
       <Carousel autoSwipeInterval={5000}>
         <CarouselItem src="/img/home-carousel/1.webp" alt="Students' Gymkhana">
         </CarouselItem>
