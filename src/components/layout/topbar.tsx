@@ -26,15 +26,15 @@ export default function TopBar() {
 
     const CouncilOptions: MobileAccordionOption[] = [
         {
-            href: "/tech",
+            href: "/councils/tech",
             label: "Science and Tech",
         },
         {
-            href: "/socio-cult",
+            href: "/councils/cult",
             label: "Socio Cult",
         },
         {
-            href: "/sports",
+            href: "/councils/sports",
             label: "Sports",
         },
     ];
