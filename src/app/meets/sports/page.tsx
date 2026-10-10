@@ -1,12 +1,12 @@
 "use client";
 
-import MeetCarousel from "@/components/layout/MeetCarousel";
+import CommonCarousel from "@/components/layout/CommonCarousel";
 
 export default function sportsMeet() {
   return (
     <main className="h-dvh w-full overflow-hidden">
-      <MeetCarousel
-        meetName="INTER IIT SPORTS MEET"
+      <CommonCarousel
+        commonName="INTER IIT SPORTS MEET"
         heightClassName="h-dvh min-h-screen"
         images={[
           "/img/sports-carousel/sports (1).jpg",

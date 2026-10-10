@@ -29,7 +29,7 @@ export default function Dropdown({ options, children }: { options: { href: strin
                             <Link
                                 href={option.href}
                                 onClick={() => setIsDropdownOpen(false)}
-                                className="block px-4 py-2 text-sm text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+                                className="block px-4 py-2 text-[13px] text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
                             >
                                 {option.label}
                             </Link>
