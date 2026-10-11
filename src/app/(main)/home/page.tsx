@@ -1,22 +1,24 @@
 "use client";
 
-import { Carousel, CarouselItem } from "@/components/layout/Carousel";
-import Footer from "@/components/layout/Footer";
+import CommonCarousel from "@/components/layout/CommonCarousel";
 
 export default function Home() {
   return (
     <div className="min-h-screen w-full flex flex-col justify-between bg-white dark:bg-black text-neutral-800 dark:text-neutral-200">
-      {/* Hero Carousel */}
-      <div className="relative w-full h-[50vh] min-h-[380px] md:h-[65vh] lg:h-[75vh]">
-        <Carousel autoSwipeInterval={5000}>
-          <CarouselItem src="/img/home-carousel/1.webp" alt="Students' Gymkhana" />
-          <CarouselItem src="/img/home-carousel/2.webp" alt="Science and Technology Council" />
-          <CarouselItem src="/img/home-carousel/3.webp" alt="Socio-Cultural Council" />
-          <CarouselItem src="/img/home-carousel/4.webp" alt="Sports Council" />
-          <CarouselItem src="/img/home-carousel/5.webp" alt="Fests and Celebrations" />
-          <CarouselItem src="/img/home-carousel/6.webp" alt="Inter-IIT Competitions" />
-        </Carousel>
-      </div>
+      <section className="h-dvh w-full overflow-hidden">
+        <CommonCarousel
+          commonName=" "
+          heightClassName="h-dvh min-h-screen"
+          images={[
+            "/img/home-carousel/1.webp",
+            "/img/home-carousel/2.webp",
+            "/img/home-carousel/3.webp",
+            "/img/home-carousel/4.webp",
+            "/img/home-carousel/5.webp",
+            "/img/home-carousel/6.webp",
+          ]}
+        />
+      </section>
 
       {/* Main Content Sections */}
       <main className="w-full flex-1">
