@@ -5,11 +5,6 @@ import Link from "next/link";
 import Dropdown from "@/components/ui/dropdown";
 import { MobileAccordion, MobileNavLink, MobileAccordionOption, HamburgerButton } from "./MobileHamburger";
 
-
-
-
-
-
 export default function TopBar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 

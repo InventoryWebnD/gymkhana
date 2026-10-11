@@ -1,38 +1,36 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import "./globals.css";
-import TopBar from "@/components/layout/topbar";
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+    variable: "--font-geist-sans",
+    subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+    variable: "--font-geist-mono",
+    subsets: ["latin"],
 });
 
 const montserrat = Montserrat({
-  variable: "--font-montserrat",
-  subsets: ["latin"],
+    variable: "--font-montserrat",
+    subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Students' Gymkhana, IIT Bhubaneswar",
-  description: "gymkhana-iitbbs",
+    title: "Students' Gymkhana, IIT Bhubaneswar",
+    description: "gymkhana-iitbbs",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
-  return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} h-full antialiased`}
-    >
-      <body>
-        <TopBar/>
-        {children}
-      </body>
-    </html>
-  );
+    return (
+        <html
+            lang="en"
+            className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} h-full antialiased`}
+        >
+            <body>
+                {children}
+            </body>
+        </html>
+    );
 }
