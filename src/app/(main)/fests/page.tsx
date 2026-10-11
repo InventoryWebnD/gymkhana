@@ -2,7 +2,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Footer from "@/components/layout/Footer";
 import Link from "next/link";
 import {
   ArrowDown,
@@ -111,7 +110,7 @@ const staggerContainer = {
   },
 };
 
-function SocialLinks({ fest }) {
+function SocialLinks({ fest }: any) {
   return (
     <div className="flex flex-wrap items-center gap-3">
       {fest.website && (
@@ -164,9 +163,8 @@ function FestSection({ fest, index }) {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.15 }}
-      className={`group grid items-center gap-8 py-12 md:grid-cols-2 md:gap-14 md:py-20 ${
-        reversed ? "md:[&>div:first-child]:order-2" : ""
-      }`}
+      className={`group grid items-center gap-8 py-12 md:grid-cols-2 md:gap-14 md:py-20 ${reversed ? "md:[&>div:first-child]:order-2" : ""
+        }`}
     >
       <div className="relative">
         <div
@@ -307,7 +305,7 @@ export default function FestPage() {
           heightClassName="h-dvh min-h-[600px]"
         />
 
-        
+
         <motion.button
           type="button"
           onClick={() => {
@@ -512,7 +510,6 @@ export default function FestPage() {
           </div>
         </motion.div>
       </section>
-      <Footer/>
     </main>
   );
 }
