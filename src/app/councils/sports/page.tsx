@@ -1,12 +1,12 @@
 "use client";
 
-import CouncilCarousel from "@/components/layout/CouncilCarousel";
+import CommonCarousel from "@/components/layout/CommonCarousel";
 
 export default function SportCouncil() {
   return (
     <main className="h-dvh w-full overflow-hidden">
-      <CouncilCarousel
-        councilName="SPORTS COUNCIL"
+      <CommonCarousel
+        commonName="SPORTS COUNCIL"
         heightClassName="h-dvh min-h-screen"
         images={[
           "/img/sports-carousel/1.jpg",

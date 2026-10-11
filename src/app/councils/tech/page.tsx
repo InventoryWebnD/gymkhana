@@ -1,12 +1,12 @@
 "use client";
 
-import CouncilCarousel from "@/components/layout/CouncilCarousel";
+import CommonCarousel from "@/components/layout/CommonCarousel";
 
 export default function TechCouncil() {
   return (
     <main className="h-dvh w-full overflow-hidden">
-      <CouncilCarousel
-        councilName="TECHNICAL COUNCIL"
+      <CommonCarousel
+        commonName="TECHNICAL COUNCIL"
         heightClassName="h-dvh min-h-screen"
         images={[
           "/img/tech-carousel/1.jpg",

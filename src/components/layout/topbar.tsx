@@ -40,9 +40,10 @@ export default function TopBar() {
     ];
 
     const MeetOptions: MobileAccordionOption[] = [
-        { href: "/tech-meet", label: "Inter IIT Tech Meet" },
-        { href: "/cult-meet", label: "Inter IIT Cult Meet" },
-        { href: "/sports-meet", label: "Inter IIT Sports Meet" },
+        { href: "/meets/tech", label: "Inter IIT Tech Meet" },
+        { href: "/meets/cult", label: "Inter IIT Cult Meet" },
+        { href: "/meets/sports", label: "Inter IIT Sports Meet" },
+        { href: "/meets/gc", label: "General Championship" },
     ];
 
     const closeMobileMenu = () => {
@@ -55,7 +56,7 @@ export default function TopBar() {
             <Link href="/home" className="flex items-center gap-3 z-50" onClick={closeMobileMenu}>
                 <img className="w-12 h-12 md:w-16 md:h-16 object-contain" src="/icons/logo.png" alt="Gymkhana Logo" />
                 <h1 className="text-lg sm:text-xl md:text-2xl font-bold tracking-wider font-montserrat select-none">
-                    STUDENTS' GYMKHANA
+                    STUDENTS&apos; GYMKHANA
                 </h1>
             </Link>
 
