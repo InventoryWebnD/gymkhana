@@ -120,7 +120,7 @@ const societies = [
 
 export default function SocioCulturalCouncil() {
   return (
-    <main className="w-full">
+    <main className="w-full" style={{"background": "white"}}>
       {/* Existing socio-cultural carousel */}
       <section className="h-dvh w-full overflow-hidden">
         <CommonCarousel

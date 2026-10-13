@@ -48,7 +48,7 @@ const societies = [
 
 export default function TechCouncil() {
   return (
-    <main className="w-full">
+    <main className="w-full" style={{"background": "white"}}>
       <section className="h-dvh w-full overflow-hidden">
         <CommonCarousel
           commonName="TECHNICAL COUNCIL"

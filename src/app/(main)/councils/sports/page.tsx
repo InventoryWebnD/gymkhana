@@ -85,7 +85,7 @@ const sports = [
 
 export default function SportCouncil() {
   return (
-    <main className="w-full">
+    <main className="w-full" style={{"background": "white"}}>
       {/* Existing Sports Council carousel */}
       <section className="h-dvh w-full overflow-hidden">
         <CommonCarousel

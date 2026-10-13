@@ -43,7 +43,7 @@ export default function SectionShowcase({
 
     return (
         <section
-            className={`flex w-full flex-col overflow-hidden bg-white text-black md:flex-row ${!imageFirst ? "md:flex-row-reverse" : ""
+            className={`flex m-10 flex-col overflow-hidden bg-white text-black md:flex-row ${!imageFirst ? "md:flex-row-reverse" : ""
                 } ${className}`}
         >
             {/* IMAGE */}
