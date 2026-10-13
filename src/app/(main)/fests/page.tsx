@@ -1,7 +1,7 @@
 
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
 import {
   ArrowDown,
@@ -92,9 +92,9 @@ const pastFests = [
   },
 ];
 
-const ease = [0.22, 1, 0.36, 1];
+const ease = [0.22, 1, 0.36, 1] as const;
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 35 },
   visible: {
     opacity: 1,
@@ -103,14 +103,17 @@ const fadeUp = {
   },
 };
 
-const staggerContainer = {
+const staggerContainer: Variants = {
   hidden: {},
   visible: {
     transition: { staggerChildren: 0.15 },
   },
 };
 
-function SocialLinks({ fest }: any) {
+type CurrentFest = (typeof currentFests)[number];
+type PastFest = (typeof pastFests)[number];
+
+function SocialLinks({ fest }: { fest: { website?: string | null; instagram?: string | null; facebook?: string | null; name: string } }) {
   return (
     <div className="flex flex-wrap items-center gap-3">
       {fest.website && (
@@ -154,7 +157,7 @@ function SocialLinks({ fest }: any) {
   );
 }
 
-function FestSection({ fest, index }) {
+function FestSection({ fest, index }: { fest: CurrentFest; index: number }) {
   const reversed = index % 2 === 1;
 
   return (
@@ -237,7 +240,7 @@ function FestSection({ fest, index }) {
   );
 }
 
-function PastFestCard({ fest }) {
+function PastFestCard({ fest }: { fest: PastFest }) {
   return (
     <motion.article
       variants={fadeUp}
