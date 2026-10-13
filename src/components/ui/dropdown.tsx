@@ -1,10 +1,32 @@
-import { useState } from "react";
+"use client";
+
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
 export default function Dropdown({ options, children }: { options: { href: string, label: string }[], children: React.ReactNode }) {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const dropdownRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (!isDropdownOpen) return;
+
+        function handleClickOutside(event: MouseEvent | TouchEvent) {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+                setIsDropdownOpen(false);
+            }
+        }
+
+        document.addEventListener("mousedown", handleClickOutside);
+        document.addEventListener("touchstart", handleClickOutside);
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+            document.removeEventListener("touchstart", handleClickOutside);
+        };
+    }, [isDropdownOpen]);
+
     return (
-        <div className="relative">
+        <div ref={dropdownRef} className="relative">
             <button
                 type="button"
                 onClick={() => setIsDropdownOpen((prev) => !prev)}
