@@ -1,0 +1,64 @@
+
+[
+  {
+    "slug": "panacea",
+    "name": "PANACEA",
+    "subtitle": "ENGLISH LITERARY SOCIETY",
+    "logo": "/societies/panacea/logo.png",
+    "bannerImage": "/societies/panacea/banner.jpg",
+    "aboutImage": "/societies/panacea/about.jpg",
+    "aboutCaption": "We are a group of people who believe in the power of words. We are artists. We are magicians. We are philosophers. We are Panacea!",
+    "aboutTitle": "About Us",
+    "aboutDescription": "Welcome to Panacea, the English Literary Society of Indian Institute of Technology Bhubaneswar. We are the student media body of our esteemed institute. We cover happenings around the campus, take interviews, and share our perspectives about events across the planet. We are book addicts, movie buffs, novel junk-heads, TV series enthusiasts, philosophers, speakers and fun-lovers. Panacea brings together students with common interests and talents, helping them develop their literary skills and creative abilities.",
+    "highlights": [
+      "The Mid sem saga",
+      "Gymkhana election drama",
+      "The Love letter",
+      "An Anty Affair",
+      "The journey called Alma Fiesta"
+    ],
+    "socialLinks": {
+      "instagram": "https://www.instagram.com/",
+      "facebook": "https://www.facebook.com/"
+    },
+    "happenings": [
+      {
+        "title": "Literary event",
+        "description": "An upcoming literary event by Panacea.",
+        "date": "Coming Soon",
+        "image": "/societies/panacea/about.jpg",
+        "link": ""
+      }
+    ],
+    "otherSocieties": [
+      {
+        "name": "Aaroh",
+        "logo": "/societies/aaroh/logo.png",
+        "link": "/societies/aaroh"
+      },
+      {
+        "name": "WebnD",
+        "logo": "/societies/webnd/logo.png",
+        "link": "/societies/webnd"
+      }
+    ],
+    "contacts": {
+      "secretary": {
+        "name": "Secretary Name",
+        "role": "Secretary",
+        "image": "",
+        "email": "secretary@example.com",
+        "phone": ""
+      },
+      "governors": [
+        {
+          "name": "Governor Name",
+          "role": "Governor",
+          "image": "",
+          "email": "governor@example.com",
+          "phone": ""
+        }
+      ]
+    }
+  }
+]

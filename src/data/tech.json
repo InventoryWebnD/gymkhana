@@ -1,0 +1,58 @@
+
+[
+  {
+    "slug": "webnd",
+    "name": "WebnD",
+    "subtitle": "WEB AND DESIGN SOCIETY",
+    "logo": "/societies/webnd/logo.png",
+    "bannerImage": "/societies/webnd/banner.jpg",
+    "aboutImage": "/societies/webnd/about.jpg",
+    "aboutCaption": "Building ideas, designing experiences, and creating for the web.",
+    "aboutTitle": "About Us",
+    "aboutDescription": "WebnD is the web development and design society of IIT Bhubaneswar. The society brings together students interested in web technologies, UI/UX design, software development and emerging digital tools. Through workshops, projects, hackathons and collaborative learning, members build practical skills and create meaningful digital experiences.",
+    "highlights": [
+      "Web development workshops",
+      "Design sessions",
+      "Web hackathons",
+      "Collaborative projects"
+    ],
+    "socialLinks": {
+      "instagram": "https://www.instagram.com/",
+      "facebook": "https://www.facebook.com/"
+    },
+    "happenings": [
+      {
+        "title": "Web Development Workshop",
+        "description": "A workshop to explore modern web development.",
+        "date": "Coming Soon",
+        "image": "/societies/webnd/about.jpg",
+        "link": ""
+      }
+    ],
+    "otherSocieties": [
+      {
+        "name": "Panacea",
+        "logo": "/societies/panacea/logo.png",
+        "link": "/societies/panacea"
+      }
+    ],
+    "contacts": {
+      "secretary": {
+        "name": "Secretary Name",
+        "role": "Secretary",
+        "image": "",
+        "email": "secretary@example.com",
+        "phone": ""
+      },
+      "governors": [
+        {
+          "name": "Governor Name",
+          "role": "Governor",
+          "image": "",
+          "email": "governor@example.com",
+          "phone": ""
+        }
+      ]
+    }
+  }
+]
