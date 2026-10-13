@@ -75,7 +75,7 @@ export default function TechCouncil() {
             exploreItems={[
               {
                 label: society.exploreLabel,
-                href:`{/societies/${society.slug}`,
+                href:`/councils/tech/${society.slug}`,
               },
             ]}
           />

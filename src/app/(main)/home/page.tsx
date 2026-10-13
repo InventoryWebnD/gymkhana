@@ -5,10 +5,10 @@ import CommonCarousel from "@/components/layout/CommonCarousel";
 export default function Home() {
   return (
     <div className="min-h-screen w-full flex flex-col justify-between bg-white dark:bg-black text-neutral-800 dark:text-neutral-200">
-      <section className="h-[50vh] md:h-[80vh] w-full overflow-hidden">
+      <section className="h-dvh w-full overflow-hidden">
         <CommonCarousel
           commonName=" "
-          heightClassName="h-full"
+          heightClassName="h-dvh min-h-screen"
           images={[
             "/img/home-carousel/1.webp",
             "/img/home-carousel/2.webp",

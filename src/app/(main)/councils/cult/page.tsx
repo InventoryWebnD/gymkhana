@@ -13,7 +13,7 @@ const societies = [
     exploreItems: [
       {
         label: "Explore Kalakriti",
-        href: "/societies/kalakriti",
+        href: "/councils/cult/kalakriti",
       },
     ],
   },
@@ -26,7 +26,7 @@ const societies = [
     exploreItems: [
       {
         label: "Explore D Groovers",
-        href: "/societies/d-groovers",
+        href: "/councils/cult/d-groovers",
       },
     ],
   },
@@ -39,7 +39,7 @@ const societies = [
     exploreItems: [
       {
         label: "Explore Fourth Wall",
-        href: "/societies/fourth-wall",
+        href: "/councils/cult/fourth-wall",
       },
     ],
   },
@@ -52,7 +52,7 @@ const societies = [
     exploreItems: [
       {
         label: "Explore Aaroh",
-        href: "/societies/aaroh",
+        href: "/councils/cult/aaroh",
       },
     ],
   },
@@ -65,15 +65,15 @@ const societies = [
     exploreItems: [
       {
         label: "Explore Abhivyakti",
-        href: "/societies/abhivyakti",
+        href: "/councils/cult/abhivyakti",
       },
       {
         label: "Explore Panacea",
-        href: "/societies/panacea",
+        href: "/councils/cult/panacea",
       },
       {
         label: "Explore QuizSoc",
-        href: "/societies/quiz-society",
+        href: "/councils/cult/quiz-society",
       },
     ],
   },
@@ -86,7 +86,7 @@ const societies = [
     exploreItems: [
       {
         label: "Explore Cinewave",
-        href: "/societies/cinewave",
+        href: "/councils/cult/cinewave",
       },
     ],
   },
@@ -99,7 +99,7 @@ const societies = [
     exploreItems: [
       {
         label: "Explore Souls for Solace",
-        href: "/societies/souls-for-solace",
+        href: "/councils/cult/souls-for-solace",
       },
     ],
   },
@@ -112,7 +112,7 @@ const societies = [
     exploreItems: [
       {
         label: "Explore CLIX",
-        href: "/societies/clix",
+        href: "/councils/cult/clix",
       },
     ],
   },
