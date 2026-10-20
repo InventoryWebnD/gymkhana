@@ -67,9 +67,13 @@ export default function TopBar() {
                 <Link href="/fests" className="hover:text-neutral-300 transition-colors">
                     FESTS
                 </Link>
+                
                 <Dropdown options={MeetOptions}>MEETS</Dropdown>
                 <Link href="/constitution" className="hover:text-neutral-300 transition-colors">
                     CONSTITUTION
+                </Link>
+                <Link href="/office" className="hover:text-neutral-300 transition-colors">
+                    OFFICE
                 </Link>
                 <Link href="/contact" className="hover:text-neutral-300 transition-colors">
                     CONTACT US
