@@ -136,7 +136,7 @@ export default function SocioCulturalCouncil() {
       </section>
 
       {/* Semicircular interactive wheel and focused society details */}
-      <CulturalWheel societies={societies} />
+      <CulturalWheel societies={societies} type="cult" />
     </main>
   );
 }
