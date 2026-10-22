@@ -21,9 +21,10 @@ export interface SocietyItem {
 
 interface CulturalWheelProps {
   societies: SocietyItem[];
+  type:'cult' | 'tech'
 }
 
-export default function CulturalWheel({ societies }: CulturalWheelProps) {
+export default function CulturalWheel({ societies, type} : CulturalWheelProps) {
   // activeIndex can increment / decrement indefinitely for infinite looping
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -143,7 +144,7 @@ export default function CulturalWheel({ societies }: CulturalWheelProps) {
       <div className="max-w-9xl mx-auto w-full mb-6 lg:mb-10 flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-200/80 pb-5">
         <div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-extrabold text-neutral-900 tracking-tight">
-            Societies of Cultural Council
+            Societies of {type==='cult'?'Cultural':'Technical'} Council
           </h2>
         </div>
       </div>
@@ -204,8 +205,8 @@ export default function CulturalWheel({ societies }: CulturalWheelProps) {
               // Base angle for this society in the circle
               const fixedAngleDeg = i * angleStep;
               const fixedAngleRad = (fixedAngleDeg * Math.PI) / 180;
-              const posX = radius + radius * Math.cos(fixedAngleRad);
-              const posY = radius + radius * Math.sin(fixedAngleRad);
+              const posX = (radius + radius * Math.cos(fixedAngleRad)).toFixed(4);
+              const posY = (radius + radius * Math.sin(fixedAngleRad)).toFixed(4);
 
               // Angular distance from the focused society
               let diffFromActive = i - normalizedIndex;
@@ -344,7 +345,7 @@ export default function CulturalWheel({ societies }: CulturalWheelProps) {
               {/* Society Meta Tag / Counter */}
               <div className="flex items-center justify-between mb-5">
                 <span className="text-xs font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-100">
-                  Cultural Society
+                  {type==='cult'?'Cultural':'Technical'} Society
                 </span>
                 <span className="text-xs font-semibold tracking-wider text-neutral-400 font-mono">
                   {String(normalizedIndex + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
