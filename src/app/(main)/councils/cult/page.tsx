@@ -60,7 +60,7 @@ const societies = [
     name: "The Literary Society",
     description:
       "The ability to express your thoughts and ideas effectively is of paramount importance to succeed in your career as well as life in general. Panacea and Abhivyakti work for the development of the communication and language skills of the students in English and Hindi, respectively, while the Quiz Society is an open society aimed at encouraging students to expand their knowledge beyond the conventional and establishing a relationship between theory and application of the learnt concepts in a fun manner.",
-    image: "/icons/literary.png",
+    image: "/icons/combined.png",
     slug: "literary",
     exploreItems: [
       {
