@@ -26,7 +26,7 @@ const facilities = [
 export default function Facilities() {
   return (
 
-    <main className="w-full bg-white text-neutral-800 dark:bg-black dark:text-neutral-200">
+    <main className="w-full bg-white text-neutral-800">
       {/* Hero carousel: existing component preserved */}
       <section className="h-[50vh] w-full overflow-hidden md:h-[80vh]">
         <CommonCarousel
@@ -44,13 +44,13 @@ export default function Facilities() {
       </section>
 
       {/* Facilities content */}
-      <div className="mx-auto max-w-[1800px] px-5 py-12 sm:px-8 md:py-16 lg:px-8 lg:py-20">
+      <div className="mx-auto max-w-[1500px] px-5 py-12 sm:px-8 md:py-16 lg:px-12 lg:py-20">
         <div className="space-y-16 md:space-y-24 lg:space-y-32">
           {facilities.map((facility) => (
             <section
               key={facility.id}
               id={facility.id}
-              className="grid grid-cols-1 items-start gap-8 md:grid-cols-12 md:gap-10 lg:gap-12"
+              className="grid grid-cols-1 items-center gap-8 md:grid-cols-12 md:gap-10 lg:gap-14"
             >
               {/* Image */}
               <div
@@ -60,7 +60,7 @@ export default function Facilities() {
                     : "md:order-2"
                 }`}
               >
-                <div className="group relative h-[260px] overflow-hidden sm:h-[340px] md:h-[325px] lg:h-[380px]">
+                <div className="group relative h-[260px] overflow-hidden rounded-xl border border-neutral-200 bg-neutral-100 shadow-sm sm:h-[340px] md:h-[325px] lg:h-[380px]">
                   <img
                     src={facility.image}
                     alt={facility.imageAlt}
@@ -79,18 +79,18 @@ export default function Facilities() {
                 }`}
               >
                 <header className="mb-6 text-center">
-                  <h2 className="text-2xl font-bold tracking-tight text-neutral-950 dark:text-white sm:text-3xl lg:text-[40px]">
+                  <h2 className="text-2xl font-bold tracking-tight text-neutral-900 sm:text-3xl lg:text-4xl font-montserrat">
                     {facility.title}
                   </h2>
 
-                  <div className="mx-auto mt-4 flex w-[150px] items-center justify-center">
-                    <span className="h-[2px] flex-1 bg-neutral-300 dark:bg-neutral-700" />
-                    <span className="h-[4px] w-[50px] bg-blue-700" />
-                    <span className="h-[2px] flex-1 bg-neutral-300 dark:bg-neutral-700" />
+                  <div className="mx-auto mt-4 flex w-36 items-center justify-center">
+                    <span className="h-[2px] flex-1 bg-neutral-300" />
+                    <span className="h-1 w-12 bg-blue-700" />
+                    <span className="h-[2px] flex-1 bg-neutral-300" />
                   </div>
                 </header>
 
-                <p className="text-justify text-[15px] leading-7 text-neutral-500 dark:text-neutral-400 sm:text-base sm:leading-[29px]">
+                <p className="text-justify text-sm sm:text-base leading-relaxed text-neutral-600">
                   {facility.description}
                 </p>
               </div>

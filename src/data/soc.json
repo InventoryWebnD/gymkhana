@@ -1,0 +1,107 @@
+[
+  {
+    "name": "WebnD",
+    "slug": "webnd",
+    "logo": "/icons/webd.png",
+    "link": "/councils/tech/webnd",
+    "council": "Science & Tech"
+  },
+  {
+    "name": "RISC",
+    "slug": "risc",
+    "logo": "/icons/risc.png",
+    "link": "/councils/tech/risc",
+    "council": "Science & Tech"
+  },
+  {
+    "name": "NEUROMANCERS",
+    "slug": "neuromancers",
+    "logo": "/icons/neuromancers.png",
+    "link": "/councils/tech/neuromancers",
+    "council": "Science & Tech"
+  },
+  {
+    "name": "NAKSHATRA",
+    "slug": "nakshatra",
+    "logo": "/icons/nakshatra_1.webp",
+    "link": "/councils/tech/nakshatra",
+    "council": "Science & Tech"
+  },
+  {
+    "name": "FEBS",
+    "slug": "febs",
+    "logo": "/icons/febs.png",
+    "link": "/councils/tech/febs",
+    "council": "Science & Tech"
+  },
+  {
+    "name": "PANACEA",
+    "slug": "panacea",
+    "logo": "/icons/literary.png",
+    "link": "/councils/cult/panacea",
+    "council": "Socio-Cultural"
+  },
+  {
+    "name": "KALAKRITI",
+    "slug": "kalakriti",
+    "logo": "/icons/kalakriti.png",
+    "link": "/councils/cult/kalakriti",
+    "council": "Socio-Cultural"
+  },
+  {
+    "name": "D-GROOVERS",
+    "slug": "d-groovers",
+    "logo": "/icons/dgang.png",
+    "link": "/councils/cult/d-groovers",
+    "council": "Socio-Cultural"
+  },
+  {
+    "name": "THE FOURTH WALL",
+    "slug": "fourth-wall",
+    "logo": "/icons/dramatics.png",
+    "link": "/councils/cult/fourth-wall",
+    "council": "Socio-Cultural"
+  },
+  {
+    "name": "AAROH",
+    "slug": "aaroh",
+    "logo": "/icons/aaroh.png",
+    "link": "/councils/cult/aaroh",
+    "council": "Socio-Cultural"
+  },
+  {
+    "name": "ABHIVYAKTI",
+    "slug": "abhivyakti",
+    "logo": "/icons/abhivyakti.png",
+    "link": "/councils/cult/abhivyakti",
+    "council": "Socio-Cultural"
+  },
+  {
+    "name": "QUIZ SOCIETY",
+    "slug": "quiz-society",
+    "logo": "/icons/quizclub.png",
+    "link": "/councils/cult/quiz-society",
+    "council": "Socio-Cultural"
+  },
+  {
+    "name": "CINEWAVE",
+    "slug": "cinewave",
+    "logo": "/icons/cinewave.png",
+    "link": "/councils/cult/cinewave",
+    "council": "Socio-Cultural"
+  },
+  {
+    "name": "SOULS FOR SOLACE",
+    "slug": "souls-for-solace",
+    "logo": "/icons/sfs.png",
+    "link": "/councils/cult/souls-for-solace",
+    "council": "Socio-Cultural"
+  },
+  {
+    "name": "CLIX",
+    "slug": "clix",
+    "logo": "/icons/clix.png",
+    "link": "/councils/cult/clix",
+    "council": "Socio-Cultural"
+  }
+]

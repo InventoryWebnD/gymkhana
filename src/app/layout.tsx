@@ -20,6 +20,11 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
     title: "Students' Gymkhana, IIT Bhubaneswar",
     description: "gymkhana-iitbbs",
+    icons: {
+        icon: "/icons/iitbbs.png",
+        shortcut: "/icons/iitbbs.png",
+        apple: "/icons/iitbbs.png",
+    },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

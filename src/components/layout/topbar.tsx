@@ -46,7 +46,7 @@ export default function TopBar() {
     };
 
     return (
-        <header className="flex items-center justify-between px-4 py-3 md:px-8 md:py-4 w-full absolute top-0 left-0 right-0 z-50 bg-gradient-to-b from-zinc-950/90 via-zinc-950/50 to-transparent text-white">
+        <header className="flex items-center justify-between px-4 py-3 md:px-8 md:py-4 w-full fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-zinc-950/90 via-zinc-950/50 to-transparent text-white">
             {/* Brand / Logo */}
             <Link href="/home" className="flex items-center gap-3 z-50" onClick={closeMobileMenu}>
                 <img className="w-12 h-12 md:w-16 md:h-16 object-contain" src="/icons/iitbbs.png" alt="Gymkhana Logo" />
@@ -67,7 +67,7 @@ export default function TopBar() {
                 <Link href="/fests" className="hover:text-neutral-300 transition-colors">
                     FESTS
                 </Link>
-                
+
                 <Dropdown options={MeetOptions}>MEETS</Dropdown>
                 <Link href="/constitution" className="hover:text-neutral-300 transition-colors">
                     CONSTITUTION

@@ -1,10 +1,8 @@
-
 import type { Society, SocietyType } from "@/lib/society";
-import SocietyHero from "./SocietyHero";
-import SocietyAbout from "./SocietyAbout";
-import SocietyHappenings from "./SocietyHappenings";
-import SocietySidebar from "./SocietySidebar";
-import SocietyContacts from "./SocietyContacts";
+import SocietyOverview from "./SocietyOverview";
+import SocietySecretary from "./SocietySecretary";
+import SocietyTimeline from "./SocietyTimeline";
+import SocietySuggestions from "./SocietySuggestions";
 
 type Props = {
   society: Society;
@@ -14,20 +12,21 @@ type Props = {
 export default function SocietyBody({ society, type }: Props) {
   return (
     <main
-      className="w-full bg-white text-neutral-700"
+      className="w-full bg-white text-neutral-800 pt-24 sm:pt-28 md:pt-32 pb-24"
       data-society-type={type}
     >
-      <SocietyHero society={society} />
+      <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 space-y-20 md:space-y-28">
+        {/* 1. Big Logo on Left, Description on Right */}
+        <SocietyOverview society={society} type={type} />
 
-      <div className="mx-auto w-[94%] max-w-[1600px] py-8 sm:py-12">
-        <SocietyAbout society={society} />
+        {/* 2. Secretary (Horizontal on desktop, Vertical on mobile) */}
+        <SocietySecretary society={society} />
 
-        <div className="mt-8 grid grid-cols-1 items-start gap-8 lg:grid-cols-[minmax(0,2fr)_minmax(300px,0.95fr)] lg:gap-12">
-          <SocietyHappenings society={society} />
-          <SocietySidebar society={society} />
-        </div>
+        {/* 3. Happenings Timeline with Scroll-Triggered Flow */}
+        <SocietyTimeline society={society} />
 
-        <SocietyContacts society={society} />
+        {/* 4. Suggestions to Other Societies */}
+        <SocietySuggestions society={society} currentType={type} />
       </div>
     </main>
   );

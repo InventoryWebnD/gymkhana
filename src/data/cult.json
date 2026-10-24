@@ -1,64 +1,397 @@
-
 [
   {
     "slug": "panacea",
     "name": "PANACEA",
     "subtitle": "ENGLISH LITERARY SOCIETY",
-    "logo": "/societies/panacea/logo.png",
-    "bannerImage": "/societies/panacea/banner.jpg",
-    "aboutImage": "/societies/panacea/about.jpg",
+    "logo": "/icons/literary.png",
+    "bannerImage": "/icons/literary.png",
+    "aboutImage": "/icons/literary.png",
     "aboutCaption": "We are a group of people who believe in the power of words. We are artists. We are magicians. We are philosophers. We are Panacea!",
     "aboutTitle": "About Us",
-    "aboutDescription": "Welcome to Panacea, the English Literary Society of Indian Institute of Technology Bhubaneswar. We are the student media body of our esteemed institute. We cover happenings around the campus, take interviews, and share our perspectives about events across the planet. We are book addicts, movie buffs, novel junk-heads, TV series enthusiasts, philosophers, speakers and fun-lovers. Panacea brings together students with common interests and talents, helping them develop their literary skills and creative abilities.",
+    "aboutDescription": "Welcome to Panacea, the English Literary Society of Indian Institute of Technology Bhubaneswar. We are the student media body of our esteemed institute. We cover all the happenings around the campus, take interviews, share our perspective about events across the planet, etc. We always have something to say.\n\nBut that is not to say we are mundane. We are book addicts, movie buffs, novel junk-heads, TV series enthusiasts, enigmatic philosophers, audacious neophiliacs, eloquent speakers and of course, fun-lovers.\n\nPanacea is the platform where students of common interests and talents meet. This society was formed with a dual objective of honing the literary skills of the students and having fun while at it. We aim to bring together all the writers, poets, orators, debaters and the best minds of the College. We strive to organise many literary events and encourage participation among the students in order to voice their underlying views, give shape to their ideas as well as nurture and improve their creative skills.",
     "highlights": [
       "The Mid sem saga",
       "Gymkhana election drama",
       "The Love letter",
       "An Anty Affair",
-      "The journey called Alma Fiesta"
+      "The journey called Alma Fiesta",
+      "Girl power"
     ],
     "socialLinks": {
-      "instagram": "https://www.instagram.com/",
-      "facebook": "https://www.facebook.com/"
+      "instagram": "https://www.instagram.com/panacea.iitbbs/",
+      "facebook": "https://www.facebook.com/panacea.iitbbs"
     },
     "happenings": [
       {
-        "title": "Literary event",
-        "description": "An upcoming literary event by Panacea.",
-        "date": "Coming Soon",
-        "image": "/societies/panacea/about.jpg",
+        "title": "PANACEA Introductory & Orientation Session",
+        "description": "Welcome session for students to explore PANACEA activities, meet the team, and participate in upcoming workshops.",
+        "date": "Upcoming",
+        "image": "/icons/literary.png",
         "link": ""
-      }
-    ],
-    "otherSocieties": [
-      {
-        "name": "Aaroh",
-        "logo": "/societies/aaroh/logo.png",
-        "link": "/societies/aaroh"
-      },
-      {
-        "name": "WebnD",
-        "logo": "/societies/webnd/logo.png",
-        "link": "/societies/webnd"
       }
     ],
     "contacts": {
       "secretary": {
-        "name": "Secretary Name",
-        "role": "Secretary",
-        "image": "",
-        "email": "secretary@example.com",
+        "name": "Mayuk Doshi",
+        "role": "Panacea Secretary",
+        "image": "/img/office26/Secretaries/Panaecia.jpg",
+        "email": "secyliterary.sg@iitbbs.ac.in",
         "phone": ""
-      },
-      "governors": [
-        {
-          "name": "Governor Name",
-          "role": "Governor",
-          "image": "",
-          "email": "governor@example.com",
-          "phone": ""
-        }
-      ]
+      }
+    }
+  },
+  {
+    "slug": "kalakriti",
+    "name": "KALAKRITI",
+    "subtitle": "FINE ARTS SOCIETY",
+    "logo": "/icons/kalakriti.png",
+    "bannerImage": "/icons/kalakriti.png",
+    "aboutImage": "/icons/kalakriti.png",
+    "aboutCaption": "Art speaks where words are unable to explain.",
+    "aboutTitle": "About Us",
+    "aboutDescription": "Kalakriti is student community of art enthusiasts of IITBBS whose goal is to spread the Knowledge\n                        of art to everyone.\n                        We participate in Various competitions of other colleges, Inktober challenge and the inter IIT.\n                        Also, we make Magazines on various Artforms such as Sketching, Painting, Soap Carving, Origami\n                        and many more.\n                        We also conduct Workshops to students to share in-depth knowledge of an artform, implementation,\n                        tips and tricks and how to become best at it.\n                        And Diwali is one our main event in campus, we decorate the community center with Diya\u2019s,\n                        illuminations, lanterns and conduct fun competitions.",
+    "highlights": [
+      "Inktober challenge",
+      "Inter-IIT Cultural competitions",
+      "Art magazines (Sketching, Painting, Soap Carving)",
+      "Hands-on art workshops",
+      "Diwali campus decorations and lantern illumination"
+    ],
+    "socialLinks": {
+      "instagram": "https://www.instagram.com/kalakriti_iitbbs/",
+      "facebook": "https://www.facebook.com/Kalakriti.IITBBS"
+    },
+    "happenings": [
+      {
+        "title": "KALAKRITI Introductory & Orientation Session",
+        "description": "Welcome session for students to explore KALAKRITI activities, meet the team, and participate in upcoming workshops.",
+        "date": "Upcoming",
+        "image": "/icons/kalakriti.png",
+        "link": ""
+      }
+    ],
+    "contacts": {
+      "secretary": {
+        "name": "T Manjula Sri",
+        "role": "Kalakriti Secretary",
+        "image": "/img/office26/Secretaries/Kalakriti.jpg",
+        "email": "secyfinearts.sg@iitbbs.ac.in",
+        "phone": ""
+      }
+    }
+  },
+  {
+    "slug": "d-groovers",
+    "name": "D-GROOVERS",
+    "subtitle": "DANCE SOCIETY",
+    "logo": "/icons/dgang.png",
+    "bannerImage": "/icons/dgang.png",
+    "aboutImage": "/icons/dgang.png",
+    "aboutCaption": "Dance to express, not to impress.",
+    "aboutTitle": "About Us",
+    "aboutDescription": "D-Gang, the dance society of IIT Bhubaneswar organizes a plethora of activities spanning\n            over the whole academic year to provide the dance enthusiasts with profuse platforms to excel in this genre\n            of cult.\n            The annual workshop aims at helping students to explore their interests in various forms of dance ranging\n            from Popping to\n            Bharatnatyam. D-Gang is a hub for many stalwarts who unceasingly train themselves to express the depth of\n            their emotions through dance every time they perform on\n            stage, whether it be the Fresher\u2019s Intro, Autumn Production, Annual Production, Foundation Day, Women\u2019s day\n            or EBSB.",
+    "highlights": [
+      "Annual dance workshops (Popping to Bharatnatyam)",
+      "Fresher's Intro performance",
+      "Autumn and Annual Productions",
+      "EBSB & Foundation Day showcases"
+    ],
+    "socialLinks": {
+      "instagram": "https://www.instagram.com/dgang_iitbbs/",
+      "facebook": "https://www.facebook.com/dgangiitbbs/",
+      "youtube": "https://youtube.com/channel/UCNKzm1_Q6wzazBTY05aK3Lg"
+    },
+    "happenings": [
+      {
+        "title": "D-GROOVERS Introductory & Orientation Session",
+        "description": "Welcome session for students to explore D-GROOVERS activities, meet the team, and participate in upcoming workshops.",
+        "date": "Upcoming",
+        "image": "/icons/dgang.png",
+        "link": ""
+      }
+    ],
+    "contacts": {
+      "secretary": {
+        "name": "Himani",
+        "role": "D-Groovers Secretary",
+        "image": "/img/office26/Secretaries/DG.jpg",
+        "email": "secydance.sg@iitbbs.ac.in",
+        "phone": ""
+      }
+    }
+  },
+  {
+    "slug": "fourth-wall",
+    "name": "THE FOURTH WALL",
+    "subtitle": "DRMATICS SOCIETY",
+    "logo": "/icons/dramatics.png",
+    "bannerImage": "/icons/dramatics.png",
+    "aboutImage": "/icons/dramatics.png",
+    "aboutCaption": "All the world's a stage, and we break the fourth wall.",
+    "aboutTitle": "About Us",
+    "aboutDescription": "Drama is theater, life, an escape from life, happiness, and sadness all rolled into one.\n                    Formed in 2009, the society has been a bunch of fun-loving\n                    enthusiastic students who believe in the fact that the domains related to the theatre are the most powerful tool to bring people together and to unleash our hidden potential and talent.\n                    The society has been known for igniting an undying love for stage plays and nukkad among the student fraternity. The society tries to address various social causes by understanding the dynamics and nuances of the world around us, observing the grassroot issues closely, and at other times, by imagining and creating a utopian world order as an alternative this, through the medium of theatre. The society is known to develop performances through nukkad, stage plays, mono acts which not only revolve around political and social themes but also generate a wave of entertainment through the audience effortlessly. Our members go through a great exposure by actively taking part in inter-college competitions and have been bringing laureates for the society.\n                    Overall, it is a great place to find yourself, learn, discover your creative best, everlasting friendships and make memories of a lifetime,",
+    "highlights": [
+      "Stage plays and Nukkad Natak",
+      "Mono-acts and social awareness performances",
+      "Inter-collegiate cultural competitions",
+      "Annual theatrical productions"
+    ],
+    "socialLinks": {
+      "instagram": "https://www.instagram.com/thefourthwall.iitbbs/",
+      "facebook": "https://www.facebook.com/The-Fourth-WallDramatics-Society-of-IIT-Bhubaneswar-131402333580109"
+    },
+    "happenings": [
+      {
+        "title": "THE FOURTH WALL Introductory & Orientation Session",
+        "description": "Welcome session for students to explore THE FOURTH WALL activities, meet the team, and participate in upcoming workshops.",
+        "date": "Upcoming",
+        "image": "/icons/dramatics.png",
+        "link": ""
+      }
+    ],
+    "contacts": {
+      "secretary": {
+        "name": "Suryansh Banka",
+        "role": "The Fourth Wall Secretary",
+        "image": "/img/office26/Secretaries/4thWall.jpeg",
+        "email": "secydrams.sg@iitbbs.ac.in",
+        "phone": ""
+      }
+    }
+  },
+  {
+    "slug": "aaroh",
+    "name": "AAROH",
+    "subtitle": "THE MUSIC SOCIETY",
+    "logo": "/icons/aaroh.png",
+    "bannerImage": "/icons/aaroh.png",
+    "aboutImage": "/icons/aaroh.png",
+    "aboutCaption": "Music is the shorthand of emotion.",
+    "aboutTitle": "About Us",
+    "aboutDescription": "Aaroh was started in 2010 by a group of music enthusiasts in IIT Bhubaneswar. Over\n                    the years, it has become one of the major societies in the college, with many aspiring to\n                    join and showcase their musical talents. We are a team of about 40 members, and we\n                    perform at various Institute programs, as well as organize our own Productions, where\n                    everyone in the society gets to showcase their talents to the entire Institute. Apart from\n                    these performances, we actively participate in various fests and competitions in and\n                    around Bhubaneswar. Our talented members have composed 3 original songs so far,\n                    and these performances have brought us prizes in various competitions. Our mix of\n                    classical vocalists and rock instrumentalists has led us to improvise on many classical\n                    songs, giving them a unique twist with influences from Western music. We are looking\n                    forward to participating in Symph-Fest with full enthusiasm, and welcome the chance to\n                    make our mark at a national level.",
+    "highlights": [
+      "Semester Music Productions",
+      "Original song compositions",
+      "Fusion of classical and western rock instrumental music",
+      "Inter-college music competitions and Symph-Fest"
+    ],
+    "socialLinks": {
+      "instagram": "https://www.instagram.com/aaroh.iitbbs/",
+      "facebook": "https://www.facebook.com/Aaroh.IITBhubaneswar",
+      "youtube": "https://youtube.com/c/AarohIITBhubaneswar"
+    },
+    "happenings": [
+      {
+        "title": "AAROH Introductory & Orientation Session",
+        "description": "Welcome session for students to explore AAROH activities, meet the team, and participate in upcoming workshops.",
+        "date": "Upcoming",
+        "image": "/icons/aaroh.png",
+        "link": ""
+      }
+    ],
+    "contacts": {
+      "secretary": {
+        "name": "Parth Bansal",
+        "role": "Aaroh Secretary",
+        "image": "/img/office26/Secretaries/Aaroh.webp",
+        "email": "secymusic.sg@iitbbs.ac.in",
+        "phone": ""
+      }
+    }
+  },
+  {
+    "slug": "abhivyakti",
+    "name": "ABHIVYAKTI",
+    "subtitle": "ABHIVYAKTI SOCIETY",
+    "logo": "/icons/abhivyakti.png",
+    "bannerImage": "/icons/abhivyakti.png",
+    "aboutImage": "/icons/abhivyakti.png",
+    "aboutCaption": "Abhivyakti - Expressing thoughts, igniting minds.",
+    "aboutTitle": "About Us",
+    "aboutDescription": "\"Abhivyakti\" means 'expressing one's own thoughts'.  Psychologists have considered expression as the main tool for the adjustment of personality.  Through this man illuminates his feelings and gives form to his feelings.  The main goal of the Hindi Literary Society of Indian Institute of Technology Bhubaneshwar \"Abhivyakti\" is to provide a meaningful platform to the students of the institute through which they can express their thoughts, feelings and imaginations through dialogues, articles, poems, satires, essays etc.  Along with this, the aim of the club is to develop the enthusiasm towards Hindi literature. The society is committed to encourage literary writing and reading in the institute and always inspires the students of the institute to write literary compositions.  Every year the committee organizes many interesting events like debate, poetry writing and presentation, creative writing, Yaad Watan Ki, composition of Republic competitions in the institute.  Apart from this, during Hindi Pakhwada (15 days program), students organize Kavi Sammelan, Meri Kriti, Awaaz Dil Ki, Bas Yeh Pal, Kavya Sarita (Poet Conference) in which various competitions and workshops are organized.  \"Abhivyakti\" The Hindi Literary Society was established in September 2015. The following students played an important role in foundation of the society :- Founder: Vivek Pratap Singh, Co-Founder: Anurag Verma, Shashank Shekhar",
+    "highlights": [
+      "Hindi Pakhwada 15-day celebration",
+      "Kavi Sammelan and Kavya Sarita",
+      "Debates and creative writing contests",
+      "Yaad Watan Ki patriotic programs"
+    ],
+    "socialLinks": {
+      "instagram": "https://www.instagram.com/abhivyakti_iitbbs/",
+      "facebook": "https://www.facebook.com/abhivyakti.iitbbs"
+    },
+    "happenings": [
+      {
+        "title": "ABHIVYAKTI Introductory & Orientation Session",
+        "description": "Welcome session for students to explore ABHIVYAKTI activities, meet the team, and participate in upcoming workshops.",
+        "date": "Upcoming",
+        "image": "/icons/abhivyakti.png",
+        "link": ""
+      }
+    ],
+    "contacts": {
+      "secretary": {
+        "name": "Sitanshu Tiwari",
+        "role": "Abhivyakti Secretary",
+        "image": "/img/office26/Secretaries/Abhivyakti.jpeg",
+        "email": "secyabhivyakti.sg@iitbbs.ac.in",
+        "phone": ""
+      }
+    }
+  },
+  {
+    "slug": "quiz-society",
+    "name": "QUIZ SOCIETY",
+    "subtitle": "QUIZ SOCIETY SOCIETY",
+    "logo": "/icons/quizclub.png",
+    "bannerImage": "/icons/quizclub.png",
+    "aboutImage": "/icons/quizclub.png",
+    "aboutCaption": "Curiosity is the wick in the candle of learning.",
+    "aboutTitle": "About Us",
+    "aboutDescription": "Quiz Club was formed with a motive to promote curiosity among\n            students regarding events and origin of things we observe around us\n            while gaining some knowledge and having fun with it.\n            We also have themed quizzes on occasions like Rashtriya Ekta Diwas,\n            Women\u2019s Day. Our Instagram page has quizzes covering a plethora of topics like \u2013 Football, IPL,\n            Ramayana, Current Affairs, Olympics, Engineering,\n            Food and travel, Business, Olympics, Bollywood, cartoons, etc.\n            Apart from representing the institute at the prestigious Springfestof IIT Kharagpur,\n            Quiz Club has gained exposure by participating and bagging prizes in various Quiz contests.",
+    "highlights": [
+      "Themed quizzes (Rashtriya Ekta Diwas, Women's Day)",
+      "Social media quiz series across sports, history, science",
+      "Spring Fest IIT Kharagpur representations",
+      "Inter-college quiz championships"
+    ],
+    "socialLinks": {
+      "instagram": "https://www.instagram.com/quizsoc.iitbbs/",
+      "facebook": "https://www.facebook.com/QFactorIITBBS"
+    },
+    "happenings": [
+      {
+        "title": "QUIZ SOCIETY Introductory & Orientation Session",
+        "description": "Welcome session for students to explore QUIZ SOCIETY activities, meet the team, and participate in upcoming workshops.",
+        "date": "Upcoming",
+        "image": "/icons/quizclub.png",
+        "link": ""
+      }
+    ],
+    "contacts": {
+      "secretary": {
+        "name": "Aditya Gupta",
+        "role": "QuizSoc Secretary",
+        "image": "/img/office26/Secretaries/Quiz.jpg",
+        "email": "secyquiz.sg@iitbbs.ac.in",
+        "phone": ""
+      }
+    }
+  },
+  {
+    "slug": "cinewave",
+    "name": "CINEWAVE",
+    "subtitle": "THE CINEMATICS SOCIETY",
+    "logo": "/icons/cinewave.png",
+    "bannerImage": "/icons/cinewave.png",
+    "aboutImage": "/icons/cinewave.png",
+    "aboutCaption": "A lot of cinematography is intuition. It's an art, not a formula - Reed Morano",
+    "aboutTitle": "About Us",
+    "aboutDescription": "\u201cA lot of cinematography is intuition. It's an art, not a formula\u201d - Reed Morano\n\nFilm reflects an experience of vision, of movement, of synchronized sound that is not limited to theatres and projectors.\n                   No other form of art can compete with films when it comes to depicting life.\n                     \n                      With this notion of creating something new, Cinewave, the cinematics society of IIT Bhubaneswar was formed by a handful of artistic geeks and cinephiles who love deep ideas, and at the same time, not willing to wake up to the world's end unless it has some really good special effects.\n                       Cinewave continuously strives to deliver good content and quality films. Cinewave has an active YouTube channel featuring innovative and creative videos.\n                        In the journey of loving and learning to make films, Cinewave has won various film making competitions including the national level film making competition \u2018We Care film Fest\u2019 and also the ones conducted by Rendezvous - IIT Delhi, Spring Fest - IIT Kharagpur. Cinewave also secured the 1st runner-up position in the Inter IIT Cultural meet held in 2018.",
+    "highlights": [
+      "Awarded at national-level 'We Care Film Fest'",
+      "Podium finish in Inter-IIT Cultural Meet",
+      "Rendezvous (IIT Delhi) and Spring Fest (IIT Kharagpur) awards",
+      "Short film productions and YouTube showcases"
+    ],
+    "socialLinks": {
+      "instagram": "https://www.instagram.com/cinewaveiitbbs/",
+      "facebook": "https://www.facebook.com/cinewaveiitbbs"
+    },
+    "happenings": [
+      {
+        "title": "CINEWAVE Introductory & Orientation Session",
+        "description": "Welcome session for students to explore CINEWAVE activities, meet the team, and participate in upcoming workshops.",
+        "date": "Upcoming",
+        "image": "/icons/cinewave.png",
+        "link": ""
+      }
+    ],
+    "contacts": {
+      "secretary": {
+        "name": "Shlok Agarwal",
+        "role": "Cinewave Secretary",
+        "image": "/img/office26/Secretaries/CW.jpeg",
+        "email": "secycinematics.sg@iitbbs.ac.in",
+        "phone": ""
+      }
+    }
+  },
+  {
+    "slug": "souls-for-solace",
+    "name": "SOULS FOR SOLACE",
+    "subtitle": "THE SOCIAL WELFARE SOCIETY",
+    "logo": "/icons/sfs.png",
+    "bannerImage": "/icons/sfs.png",
+    "aboutImage": "/icons/sfs.png",
+    "aboutCaption": "We make a living by what we get, but we make a life by what we give.",
+    "aboutTitle": "About Us",
+    "aboutDescription": "Souls for Solace is the social welfare society of IIT Bhubaneshwar with the ultimate motto of helping the community to reach a better tomorrow. \n                  Souls  for Solace organizes Blood Donation Camps and Health Camps every  year to develop the social cooperation spirit in students to help people. \n                  Souls for Solace organizes Children's fest every year for the under privileged kids from different orphanages to promote the intercultural  relations. \n                  Souls for Solace organizes multiple Donation Drives every  year which consists of Book Donation, Cloth Donation, etc. to make  everyone aware of what many unfortunate people don\u2019t possess. Collection and Recycling of newspapers in every semester. \n                  Souls for  Solace conducts a cleanliness awareness drive along with NSS at various villages to serve the society in its possible need. \n                  Souls for Solace  conducted multiple surveys for the workers of our campus and made  them aware about the various government schemes. Souls for Solace  collaborates with some bigger organizations to raise funds and organizes some online Events as well. \n                  Souls for Solace have been  working very hard since some time now to inculcate values like helping",
+    "highlights": [
+      "Annual Blood Donation & Health Camps",
+      "Children's fest for orphanages",
+      "Cloth, book, and newspaper recycling drives",
+      "Village cleanliness awareness drives with NSS"
+    ],
+    "socialLinks": {
+      "instagram": "https://www.instagram.com/soulsforsolace/",
+      "facebook": "https://www.facebook.com/s4s.iitbbs"
+    },
+    "happenings": [
+      {
+        "title": "SOULS FOR SOLACE Introductory & Orientation Session",
+        "description": "Welcome session for students to explore SOULS FOR SOLACE activities, meet the team, and participate in upcoming workshops.",
+        "date": "Upcoming",
+        "image": "/icons/sfs.png",
+        "link": ""
+      }
+    ],
+    "contacts": {
+      "secretary": {
+        "name": "Kaustubh",
+        "role": "Souls for Solas Secretary",
+        "image": "/img/office26/Secretaries/S4S.jpeg",
+        "email": "secysfs.sg@iitbbs.ac.in",
+        "phone": ""
+      }
+    }
+  },
+  {
+    "slug": "clix",
+    "name": "CLIX",
+    "subtitle": "THE PHOTOGRAPHY SOCIETY",
+    "logo": "/icons/clix.png",
+    "bannerImage": "/icons/clix.png",
+    "aboutImage": "/icons/clix.png",
+    "aboutCaption": "Photography is the only language that can be understood anywhere in the world - Bruno Barbey",
+    "aboutTitle": "About Us",
+    "aboutDescription": "\u201cPhotography is the only language that can be understood anywhere in the world\u201d\n    - Bruno BarbeyClix is a crew of snappers whose mission is to relish the joy of photography both as a profession and also as a hobby. The society includes students of all levels who love capturing unique shots and practise the art of photography for the benefit of the self as well as the campus community. We organize various workshops on photography and post processing for the benefit of amateur shutterbugs. To bring out the hidden talent of the amateur photographers we provide them hands-on-experience through the coverage of various events that are conducted in the campus.The Clix community boasts of its undying passion for photography by communicating all its\u2019 zealousness in the form a magazine titled Clixages which includes mesmerizing clicks of the society photographers and thought-provoking articles. We are active users of social media sites for promoting the divinity of photography to the outside world. You can find us on Facebook and Instagram pages where our best output is posted by the members.Are you a photo enthusiast? Do you love to click innovative snapshots? Then CLIX is the right platform for you. We are here to nurture your skills and build you as an amazing photographer.",
+    "highlights": [
+      "Clixages photography magazine",
+      "Workshops on photography and post-processing",
+      "Campus event coverage and photo walks",
+      "Exhibitions and photo contests"
+    ],
+    "socialLinks": {
+      "instagram": "https://www.instagram.com/clixiitbbs/",
+      "facebook": "https://www.facebook.com/clixiitbbs"
+    },
+    "happenings": [
+      {
+        "title": "CLIX Introductory & Orientation Session",
+        "description": "Welcome session for students to explore CLIX activities, meet the team, and participate in upcoming workshops.",
+        "date": "Upcoming",
+        "image": "/icons/clix.png",
+        "link": ""
+      }
+    ],
+    "contacts": {
+      "secretary": {
+        "name": "Prashik Naik",
+        "role": "Clix Secretary",
+        "image": "/img/office26/Secretaries/Clix.jpg",
+        "email": "secyphotography.sg@iitbbs.ac.in",
+        "phone": ""
+      }
     }
   }
 ]
