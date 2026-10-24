@@ -15,15 +15,6 @@
   --font-montserrat: var(--font-montserrat);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --text-primary: #ededed;
-    --text-hover: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);

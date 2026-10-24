@@ -45,13 +45,13 @@ export default function Dropdown({ options, children }: { options: { href: strin
             </button>
 
             {isDropdownOpen && (
-                <ul className="absolute top-full left-0 mt-2 min-w-44 rounded-md border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-lg py-1.5 z-50 flex flex-col">
+                <ul className="absolute top-full left-0 mt-2 min-w-44 rounded-md border border-neutral-200 bg-white shadow-lg py-1.5 z-50 flex flex-col">
                     {options.map((option, index) => (
                         <li key={index}>
                             <Link
                                 href={option.href}
                                 onClick={() => setIsDropdownOpen(false)}
-                                className="block px-4 py-2 text-[13px] text-neutral-700 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+                                className="block px-4 py-2 text-[13px] text-neutral-700 hover:bg-neutral-100 hover:text-blue-700 transition-colors"
                             >
                                 {option.label}
                             </Link>

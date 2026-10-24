@@ -1,58 +1,197 @@
-
 [
   {
     "slug": "webnd",
     "name": "WebnD",
     "subtitle": "WEB AND DESIGN SOCIETY",
-    "logo": "/societies/webnd/logo.png",
-    "bannerImage": "/societies/webnd/banner.jpg",
-    "aboutImage": "/societies/webnd/about.jpg",
+    "logo": "/icons/webd.png",
+    "bannerImage": "/icons/webd.png",
+    "aboutImage": "/icons/webd.png",
     "aboutCaption": "Building ideas, designing experiences, and creating for the web.",
     "aboutTitle": "About Us",
-    "aboutDescription": "WebnD is the web development and design society of IIT Bhubaneswar. The society brings together students interested in web technologies, UI/UX design, software development and emerging digital tools. Through workshops, projects, hackathons and collaborative learning, members build practical skills and create meaningful digital experiences.",
+    "aboutDescription": "Web and Design society is responsible for managing and designing all of the institute's websites. As a part of the Science and Technology Council, we aim to provide a gateway for the people in our institute to join the developer community. It teaches students the skill and art of designing websites and club designs. Members of the organization actively organize competitions for novice and experienced web developers. The first impression of an institution, its fests, or anything else is unquestionably its website. The Web and Design society ensures that this first impression is impressive, informative, up-to-date, effortless, and therefore long-lasting. This society manages all website-related matters for the institute and helps students develop their creativity and master the essential skill of website design.",
     "highlights": [
-      "Web development workshops",
-      "Design sessions",
-      "Web hackathons",
-      "Collaborative projects"
+      "Development of institute websites and portal designs",
+      "Hands-on web development & UI/UX design workshops",
+      "Hackathons and developer competitions",
+      "Mentorship in modern web technologies"
     ],
     "socialLinks": {
-      "instagram": "https://www.instagram.com/",
-      "facebook": "https://www.facebook.com/"
+      "instagram": "https://www.instagram.com/webnd.iitbbs/",
+      "facebook": "https://www.facebook.com/webnd.iitbbs/"
     },
     "happenings": [
       {
-        "title": "Web Development Workshop",
-        "description": "A workshop to explore modern web development.",
-        "date": "Coming Soon",
-        "image": "/societies/webnd/about.jpg",
+        "title": "WebnD Introductory & Orientation Session",
+        "description": "Welcome session for students to explore WebnD activities, meet the team, and participate in upcoming workshops.",
+        "date": "Upcoming",
+        "image": "/icons/webd.png",
         "link": ""
-      }
-    ],
-    "otherSocieties": [
-      {
-        "name": "Panacea",
-        "logo": "/societies/panacea/logo.png",
-        "link": "/societies/panacea"
       }
     ],
     "contacts": {
       "secretary": {
-        "name": "Secretary Name",
-        "role": "Secretary",
-        "image": "",
-        "email": "secretary@example.com",
+        "name": "Shruti Gupta",
+        "role": "WebnD Secretary",
+        "image": "/img/office26/Secretaries/WebnD.jpeg",
+        "email": "secyweb.sg@iitbbs.ac.in",
         "phone": ""
-      },
-      "governors": [
-        {
-          "name": "Governor Name",
-          "role": "Governor",
-          "image": "",
-          "email": "governor@example.com",
-          "phone": ""
-        }
-      ]
+      }
+    }
+  },
+  {
+    "slug": "risc",
+    "name": "RISC",
+    "subtitle": "ROBOTICS SOCIETY",
+    "logo": "/icons/risc.png",
+    "bannerImage": "/icons/risc.png",
+    "aboutImage": "/icons/risc.png",
+    "aboutCaption": "Engineering machines, automating possibilities.",
+    "aboutTitle": "About Us",
+    "aboutDescription": "RISC- Robotics and Intelligent Systems Club is the Robotics Society of IIT Bhubaneswar that aims to\n                        provide a forum for the students to pursue and learn innovative technology. The Society\n                        strives to improve in innovation, education and applied research in Robotics and Automation but working\n                        in a fun-filled environment sharing knowledge, information, and ideas. RISC members have also undertaken several projects to provide an\n                        opportunity for healthy student interaction. RISC also conducts a national robotics competition\n                        YANTHRIX during WISSENAIRE, the techno-management fest of IIT Bhubaneswar.",
+    "highlights": [
+      "YANTHRIX National Robotics Competition during Wissenaire",
+      "Workshops on autonomous bots, IoT, and embedded systems",
+      "Applied research projects in robotics & automation",
+      "Inter-IIT Tech Meet robotics contingent"
+    ],
+    "socialLinks": {
+      "instagram": "https://www.instagram.com/risc.iitbbs/",
+      "facebook": "https://www.facebook.com/IIT-Bhubaneswar-Robotics-Club-RISC-115352149093439/"
+    },
+    "happenings": [
+      {
+        "title": "RISC Introductory & Orientation Session",
+        "description": "Welcome session for students to explore RISC activities, meet the team, and participate in upcoming workshops.",
+        "date": "Upcoming",
+        "image": "/icons/risc.png",
+        "link": ""
+      }
+    ],
+    "contacts": {
+      "secretary": {
+        "name": "Swarnav Haldar",
+        "role": "RISC Secretary",
+        "image": "/img/office26/Secretaries/RISC.png",
+        "email": "secyrobotics.sg@iitbbs.ac.in",
+        "phone": ""
+      }
+    }
+  },
+  {
+    "slug": "neuromancers",
+    "name": "NEUROMANCERS",
+    "subtitle": "PROGRAMMING SOCIETY",
+    "logo": "/icons/neuromancers.png",
+    "bannerImage": "/icons/neuromancers.png",
+    "aboutImage": "/icons/neuromancers.png",
+    "aboutCaption": "Talk is cheap. Show me the code - Linus Torvalds",
+    "aboutTitle": "About Us",
+    "aboutDescription": "The Neuromancers, the Programming Society's main aim is to spread the knowledge of programming\n            among the students as the world is increasingly being rebuilt in cyberspace. Neuromancers was\n            formed in the year 2013 by a group of dedicated programmers. Members of the Programming Society\n            are proficient in the knowledge of various programming languages and software tools. The members of this\n            society work and participate under various titles such as\n            Android app development, Web development, Machine learning, Natural language processing, etc.\n            Last year four teams from the society had cleared the preliminary round and entered the on-site round in\n            ACM-ICPC.\n            Among them, one group has secured 24th position at the national level. In the Google Hash code contest 2020,\n            a team from the society stood in 7th position in the entire nation and secured an international rank of 224.\n            A team from the society secured 8th rank in inter IIT-Tech meet.",
+    "highlights": [
+      "ACM-ICPC on-site finalists (24th national rank)",
+      "Google Hash Code 7th national rank (224 international rank)",
+      "8th rank in Inter-IIT Tech Meet",
+      "Competitive programming and ML/AI sessions"
+    ],
+    "socialLinks": {
+      "instagram": "https://www.instagram.com/neuro_iitbbs/",
+      "facebook": "https://www.facebook.com/neuroIITBBS"
+    },
+    "happenings": [
+      {
+        "title": "NEUROMANCERS Introductory & Orientation Session",
+        "description": "Welcome session for students to explore NEUROMANCERS activities, meet the team, and participate in upcoming workshops.",
+        "date": "Upcoming",
+        "image": "/icons/neuromancers.png",
+        "link": ""
+      }
+    ],
+    "contacts": {
+      "secretary": {
+        "name": "Sutirth Jha",
+        "role": "Neuromancers Secretary",
+        "image": "/img/office26/Secretaries/Neuro.png",
+        "email": "secyprogsoc.sg@iitbbs.ac.in",
+        "phone": ""
+      }
+    }
+  },
+  {
+    "slug": "nakshatra",
+    "name": "NAKSHATRA",
+    "subtitle": "ASTRONOMY SOCIETY",
+    "logo": "/icons/nakshatra_1.webp",
+    "bannerImage": "/icons/nakshatra_1.webp",
+    "aboutImage": "/icons/nakshatra_1.webp",
+    "aboutCaption": "Look up at the stars and not down at your feet.",
+    "aboutTitle": "About Us",
+    "aboutDescription": "Nakshatra - the Astronomy society of IIT Bhubaneswar is a group of space enthusiasts,\n            passionate about stargazing and the world above the clouds. Nakshatra strives to develop a liking for\n            astronomy on the\n            campus by giving you a\n            dose of astronomical facts and speculations. Take a bite at their bi-monthly magazine, the 'Galactic Cafe'.\n            From space trivia to space fantasies, the magazine\n            covers it all. Join one of their stargazing sessions, where you would learn more about the night sky,\n            hands-on. Rest assured, Nakshatra would inject a punch of knowledge and mystery while you are here at\n            IIT Bhubaneswar.",
+    "highlights": [
+      "'Galactic Cafe' bi-monthly astronomy magazine",
+      "Telescope stargazing sessions on campus",
+      "Astrophotography workshops",
+      "Space exploration talks and trivia"
+    ],
+    "socialLinks": {
+      "instagram": "https://www.instagram.com/nakshatra_iitbbs/",
+      "facebook": "https://www.facebook.com/nakshatraiitbbs"
+    },
+    "happenings": [
+      {
+        "title": "NAKSHATRA Introductory & Orientation Session",
+        "description": "Welcome session for students to explore NAKSHATRA activities, meet the team, and participate in upcoming workshops.",
+        "date": "Upcoming",
+        "image": "/icons/nakshatra_1.webp",
+        "link": ""
+      }
+    ],
+    "contacts": {
+      "secretary": {
+        "name": "Kanupuru Saran Teja",
+        "role": "Nakshatra Secretary",
+        "image": "/img/office26/Secretaries/Nakshatra.png",
+        "email": "secyastronomy.sg@iitbbs.ac.in",
+        "phone": ""
+      }
+    }
+  },
+  {
+    "slug": "febs",
+    "name": "FEBS",
+    "subtitle": "SOCIETY OF FINANCE, ECONOMICS AND BUSINESS",
+    "logo": "/icons/febs.png",
+    "bannerImage": "/icons/febs.png",
+    "aboutImage": "/icons/febs.png",
+    "aboutCaption": "Demystifying finance, inspiring economic leadership.",
+    "aboutTitle": "About Us",
+    "aboutDescription": "We aim to familiarize everyone with the economic lens of issues and make everyone adroit in handling personal finance. The society members bond over different ideas and try to uphold the economic ideals, incubate the awareness of financial issues, thereby fostering leadership in members. We host exciting lectures and talks by eminent personalities and our alumni apart from competitions like virtual trading, stock war, auction war, etc., stimulating quizzes and engaging debates and whatnot. We also manage an online website with articles on different economic concepts and reviews, financial capacities, and business models. Society plans to build a repository of fundamental concepts of our domains. We also aim to provide roadmaps and career guidance for those interested in a career in the supply chain, product management, finance, consulting, investment banking, etc.",
+    "highlights": [
+      "Virtual trading, stock war, and auction war competitions",
+      "Lectures and talks by industry leaders and alumni",
+      "Consulting, finance, and product management roadmaps",
+      "Online repository of financial models and economic analysis"
+    ],
+    "socialLinks": {
+      "instagram": "https://www.instagram.com/febs.iitbbs/",
+      "facebook": "https://www.facebook.com/febs.iitbbs"
+    },
+    "happenings": [
+      {
+        "title": "FEBS Introductory & Orientation Session",
+        "description": "Welcome session for students to explore FEBS activities, meet the team, and participate in upcoming workshops.",
+        "date": "Upcoming",
+        "image": "/icons/febs.png",
+        "link": ""
+      }
+    ],
+    "contacts": {
+      "secretary": {
+        "name": "Harshita Jat",
+        "role": "FEBS Secretary",
+        "image": "/img/office26/Secretaries/FEBS.jpg",
+        "email": "secyfebs.sg@iitbbs.ac.in",
+        "phone": ""
+      }
     }
   }
 ]
