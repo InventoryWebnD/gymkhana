@@ -12,7 +12,7 @@ export default async function AdminLoginPage() {
   }
 
   return (
-    <main className="min-h-screen w-full bg-neutral-50 flex items-center justify-center px-4 py-24 sm:py-32">
+    <main className="min-h-screen w-full bg-paper flex items-center justify-center px-4 py-24 sm:py-32">
       <LoginForm />
     </main>
   );

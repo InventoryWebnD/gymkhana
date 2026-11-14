@@ -54,7 +54,7 @@ export function MobileNavLink({
         <Link
             href={href}
             onClick={onClick}
-            className={`py-2.5 ${borderBottom ? "border-b border-zinc-800/70" : ""} hover:text-neutral-300 transition-colors ${className}`}
+            className={`block py-2.5 ${borderBottom ? "border-b border-zinc-800/70" : ""} hover:text-[#ff6a2b] transition-colors ${className}`}
         >
             {children}
         </Link>
@@ -88,7 +88,7 @@ export function MobileAccordion({
             <button
                 type="button"
                 onClick={() => setIsOpen((prev) => !prev)}
-                className="w-full flex items-center justify-between text-left hover:text-neutral-300 transition-colors cursor-pointer"
+                className="w-full flex items-center justify-between text-left hover:text-[#ff6a2b] transition-colors cursor-pointer"
                 aria-expanded={isOpen}
             >
                 <span>{title}</span>
@@ -103,13 +103,13 @@ export function MobileAccordion({
             </button>
 
             {isOpen && (
-                <div className="mt-2 pl-4 flex flex-col space-y-2.5 border-l-2 border-zinc-700">
+                <div className="mt-3 mb-1 pl-4 flex flex-col space-y-2.5 border-l border-[#ff6a2b]/60 font-sans">
                     {options.map((option, idx) => (
                         <Link
                             key={idx}
                             href={option.href}
                             onClick={onLinkClick}
-                            className="text-sm text-neutral-300 hover:text-white transition-colors py-1"
+                            className="text-base text-neutral-300 hover:text-white transition-colors py-1"
                         >
                             {option.label}
                         </Link>

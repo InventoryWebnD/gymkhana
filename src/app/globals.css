@@ -1,22 +1,152 @@
 @import "tailwindcss";
 
-
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Gymkhana palette — navy taken from the institute crest */
+  --ink: #0a0f16;
+  --ink-2: #111a26;
+  --navy: #1a2f43;
+  --sky: #509dcb;
+  --paper: #f2eee6;
+  --paper-2: #e8e2d6;
+  --accent: #ff6a2b;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-montserrat: var(--font-montserrat);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-navy: var(--navy);
+  --color-sky: var(--sky);
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-accent: var(--accent);
+  /* font-sans is the display face (headlines); body copy uses --font-body */
+  --font-sans: var(--font-anybody);
+  --font-body: var(--font-schibsted);
+  --font-mono: var(--font-martian);
+  --font-serif: var(--font-brygada);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-schibsted), ui-sans-serif, system-ui, sans-serif;
+}
+
+/*
+ * Anybody runs from 50% (condensed) to 150% (ultra-expanded). Headlines sit a
+ * little wide by default; the GYMKHANA wordmark goes all the way.
+ */
+@layer components {
+  /* Headlines widen on large screens; normal width where space is tight. */
+  .font-sans {
+    font-stretch: 100%;
+  }
+  @media (min-width: 1024px) {
+    .font-sans {
+      font-stretch: 112%;
+    }
+  }
+  .font-mono {
+    font-stretch: 87.5%;
+  }
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--ink);
+}
+
+/*
+ * Custom classes live in the components layer so Tailwind utilities
+ * (sticky, relative, …) on the same element still win.
+ */
+@layer components {
+/* Film-grain texture over dark sections for a printed, tactile feel.
+   The element must be positioned (relative/sticky) — set that with a utility. */
+.grain {
+  isolation: isolate;
+}
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.07;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+}
+
+/* Lock scroll while the intro overlay is on screen — pure CSS, so it holds
+   from the first paint, before hydration. */
+@media (prefers-reduced-motion: no-preference) {
+  html:has(.intro-overlay) {
+    overflow: hidden;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 24s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin-slow {
+    animation: none;
+  }
+}
+
+@layer components {
+/* Preloader frame: --p (0 → 1) opens the clip from a small window to full screen */
+.intro-frame {
+  --fy: 31%;
+  --fx: 36%;
+  clip-path: inset(
+    calc(var(--fy) * (1 - var(--p, 0))) calc(var(--fx) * (1 - var(--p, 0)))
+      round calc(10px * (1 - var(--p, 0)))
+  );
+}
+@media (max-width: 640px) {
+  .intro-frame {
+    --fy: 30%;
+    --fx: 14%;
+  }
+}
+}
+
+@layer components {
+.footer-link {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  color: rgb(255 255 255 / 0.8);
+  transition: background-size 0.5s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s;
+}
+.footer-link:hover {
+  color: #fff;
+  background-size: 100% 1px;
+}
 }

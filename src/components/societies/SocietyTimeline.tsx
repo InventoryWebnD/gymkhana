@@ -1,106 +1,82 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Calendar, Clock, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { useRef } from "react";
+import { motion, useScroll } from "framer-motion";
 import type { Society } from "@/lib/society";
+import { Container } from "@/components/design/blocks";
+import { MaskLines, Reveal, SectionLabel } from "@/components/design/primitives";
 
-type Props = {
-  society: Society;
-};
-
-export default function SocietyTimeline({ society }: Props) {
+export default function SocietyTimeline({ society }: { society: Society }) {
   const events = society.happenings ?? [];
+  const listRef = useRef<HTMLOListElement>(null);
+  const { scrollYProgress } = useScroll({ target: listRef, offset: ["start 0.8", "end 0.6"] });
 
   return (
-    <section className="flex flex-col items-center">
-      <header className="text-center mb-12 sm:mb-16">
-        <h2 className="text-2xl sm:text-3xl font-bold tracking-wider text-neutral-900 uppercase font-montserrat">
-          HAPPENINGS &amp; TIMELINE
-        </h2>
-        <div className="mx-auto mt-4 flex w-36 items-center">
-          <span className="h-[2px] flex-1 bg-neutral-300" />
-          <span className="h-1 w-12 bg-blue-700" />
-          <span className="h-[2px] flex-1 bg-neutral-300" />
+    <Container className="pb-24 md:pb-32">
+      <div className="grid gap-10 border-t border-ink/15 pt-16 md:grid-cols-12 md:gap-12 md:pt-24">
+        <div className="md:col-span-4">
+          <SectionLabel index="03" className="text-ink/60">
+            Happenings
+          </SectionLabel>
+          <MaskLines
+            as="h2"
+            className="mt-7 font-serif text-[clamp(2.6rem,5vw,4.6rem)] leading-[0.95]"
+            lines={["On the", <em key="c">calendar.</em>]}
+          />
+          <Reveal>
+            <p className="mt-5 max-w-xs text-[15px] leading-relaxed text-ink/65">
+              Workshops, competitions and meet-ups organised by {society.name}.
+            </p>
+          </Reveal>
         </div>
-        <p className="mt-2 text-xs sm:text-sm text-neutral-500">
-          Key events, initiatives, and workshops organized by {society.name}
-        </p>
-      </header>
 
-      {events.length === 0 ? (
-        <div className="w-full max-w-2xl rounded-2xl border border-dashed border-neutral-300 bg-neutral-50 p-10 text-center">
-          <Calendar size={36} className="mx-auto text-neutral-400 mb-3" />
-          <h3 className="text-lg font-semibold text-neutral-800">
-            No happenings scheduled at this moment
-          </h3>
-          <p className="text-sm text-neutral-500 mt-1">
-            Stay tuned for upcoming workshops, competitions, and society meetups!
-          </p>
-        </div>
-      ) : (
-        <div className="relative w-full max-w-4xl pb-4">
-          {/* Vertical timeline spine */}
-          <div className="absolute left-4 sm:left-6 top-3 bottom-3 w-[3px] bg-gradient-to-b from-blue-700 via-blue-400 to-neutral-200 rounded-full" />
-
-          <div className="space-y-10 sm:space-y-12">
-            {events.map((event, index) => (
-              <motion.div
-                key={`${event.title}-${index}`}
-                initial={{ opacity: 0, y: 36 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}
-                className="relative pl-12 sm:pl-16"
-              >
-                {/* Timeline Node Marker */}
-                <div className="absolute left-4 sm:left-6 -translate-x-1/2 top-4 flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full bg-white border-2 border-blue-700 text-blue-700 shadow-md">
-                  <span className="h-2.5 w-2.5 rounded-full bg-blue-700" />
-                </div>
-
-                {/* Timeline Event Card */}
-                <article className="overflow-hidden rounded-2xl border border-neutral-200 bg-white p-6 sm:p-7 shadow-sm transition-all duration-300 hover:shadow-md hover:border-neutral-300">
-                  <div className="flex flex-wrap items-center justify-between gap-3 mb-3">
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700 border border-blue-200">
-                      <Clock size={13} />
-                      <span>{event.date || "Event Milestone"}</span>
-                    </span>
-
+        <div className="md:col-span-7 md:col-start-6">
+          {events.length === 0 ? (
+            <Reveal className="rounded-2xl border border-dashed border-ink/25 p-10 text-center">
+              <p className="font-serif text-3xl italic">Nothing scheduled — yet.</p>
+              <p className="mt-2 text-[14px] text-ink/60">Follow the society on social media for upcoming events.</p>
+            </Reveal>
+          ) : (
+            <ol ref={listRef} className="relative">
+              {/* progress spine */}
+              <span aria-hidden="true" className="absolute bottom-2 left-[7px] top-2 w-px bg-ink/15" />
+              <motion.span
+                aria-hidden="true"
+                style={{ scaleY: scrollYProgress, originY: 0 }}
+                className="absolute bottom-2 left-[7px] top-2 w-px bg-accent"
+              />
+              {events.map((event, i) => (
+                <Reveal key={`${event.title}-${i}`} delay={0.05} className="relative pb-12 pl-10 last:pb-0">
+                  <li>
+                    <span aria-hidden="true" className="absolute left-0 top-1.5 h-[15px] w-[15px] rounded-full border-2 border-accent bg-paper" />
+                    <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-ink/55">
+                      {event.date || "Milestone"}
+                    </p>
+                    <h3 className="mt-3 font-sans text-2xl font-semibold tracking-[-0.03em] md:text-3xl">{event.title}</h3>
+                    <p className="mt-3 whitespace-pre-line text-[15px] leading-[1.75] text-ink/70">{event.description}</p>
+                    {event.image && (
+                      <div className="relative mt-5 aspect-[16/9] max-w-lg overflow-hidden rounded-2xl bg-paper-2">
+                        <Image src={event.image} alt={event.title} fill sizes="(max-width: 768px) 100vw, 512px" className="object-contain p-6" />
+                      </div>
+                    )}
                     {event.link && (
                       <a
                         href={event.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-blue-700 hover:text-blue-900 transition-colors"
+                        className="mt-5 inline-flex items-center gap-2 text-[13px] font-medium underline-offset-4 hover:underline"
                       >
-                        <span>Learn More</span>
-                        <ArrowRight size={13} />
+                        Learn more <span aria-hidden="true">↗</span>
                       </a>
                     )}
-                  </div>
-
-                  <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-neutral-900 font-montserrat">
-                    {event.title}
-                  </h3>
-
-                  <p className="mt-3 whitespace-pre-line text-sm sm:text-base leading-relaxed text-neutral-600">
-                    {event.description}
-                  </p>
-
-                  {event.image && (
-                    <div className="mt-5 overflow-hidden rounded-xl border border-neutral-200 max-h-72 sm:max-h-80 bg-neutral-100">
-                      <img
-                        src={event.image}
-                        alt={event.title}
-                        className="h-full w-full object-cover transition-transform duration-500 hover:scale-[1.02]"
-                      />
-                    </div>
-                  )}
-                </article>
-              </motion.div>
-            ))}
-          </div>
+                  </li>
+                </Reveal>
+              ))}
+            </ol>
+          )}
         </div>
-      )}
-    </section>
+      </div>
+    </Container>
   );
 }

@@ -32,19 +32,19 @@ export default async function AdminDashboardPage() {
   ).length;
 
   return (
-    <main className="min-h-screen w-full bg-neutral-50/70 pt-28 pb-20 sm:pt-32 sm:pb-24 text-neutral-800">
+    <main className="min-h-screen w-full bg-paper pt-28 pb-20 sm:pt-32 sm:pb-24 text-neutral-800">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 space-y-10">
 
         {/* Top Header Banner */}
         <div className="rounded-2xl border border-neutral-200 bg-white p-6 sm:p-8 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div className="flex items-center gap-4">
-            <div className="h-16 w-16 shrink-0 rounded-2xl bg-blue-50 border border-blue-200 flex items-center justify-center p-2 text-blue-700">
+            <div className="h-16 w-16 shrink-0 rounded-2xl bg-paper-2 border border-ink/15 flex items-center justify-center p-2 text-ink">
               <ShieldCheck size={36} />
             </div>
 
             <div>
               <div className="flex items-center gap-2">
-                <h1 className="text-2xl sm:text-3xl font-extrabold text-neutral-900 font-montserrat tracking-tight">
+                <h1 className="text-2xl sm:text-3xl font-extrabold text-neutral-900 font-sans tracking-tight tracking-tight">
                   Admin Dashboard
                 </h1>
                 <span className="rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 px-2.5 py-0.5 text-xs font-semibold">
@@ -76,11 +76,11 @@ export default async function AdminDashboardPage() {
               <span className="text-xs font-semibold uppercase tracking-wider text-neutral-500">
                 Total Societies
               </span>
-              <div className="h-10 w-10 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center">
+              <div className="h-10 w-10 rounded-xl bg-paper-2 text-ink flex items-center justify-center">
                 <Layers size={18} />
               </div>
             </div>
-            <p className="mt-3 text-3xl font-bold text-neutral-900 font-montserrat">
+            <p className="mt-3 text-3xl font-bold text-neutral-900 font-sans tracking-tight">
               {societiesList.length}
             </p>
             <p className="mt-1 text-xs text-neutral-500">
@@ -97,7 +97,7 @@ export default async function AdminDashboardPage() {
                 <Building2 size={18} />
               </div>
             </div>
-            <p className="mt-3 text-3xl font-bold text-neutral-900 font-montserrat">
+            <p className="mt-3 text-3xl font-bold text-neutral-900 font-sans tracking-tight">
               3
             </p>
             <p className="mt-1 text-xs text-neutral-500">
@@ -114,7 +114,7 @@ export default async function AdminDashboardPage() {
                 <Users size={18} />
               </div>
             </div>
-            <p className="mt-3 text-3xl font-bold text-neutral-900 font-montserrat">
+            <p className="mt-3 text-3xl font-bold text-neutral-900 font-sans tracking-tight">
               2026–2027
             </p>
             <p className="mt-1 text-xs text-neutral-500">
@@ -131,7 +131,7 @@ export default async function AdminDashboardPage() {
                 <ShieldCheck size={18} />
               </div>
             </div>
-            <p className="mt-3 text-2xl font-bold text-neutral-900 font-montserrat">
+            <p className="mt-3 text-2xl font-bold text-neutral-900 font-sans tracking-tight">
               Verified
             </p>
             <p className="mt-1 text-xs text-neutral-500">
@@ -146,7 +146,7 @@ export default async function AdminDashboardPage() {
           <div className="rounded-2xl border border-neutral-200 bg-white p-6 sm:p-8 shadow-sm flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-4">
-                <h2 className="text-lg font-bold text-neutral-900 font-montserrat">
+                <h2 className="text-lg font-bold text-neutral-900 font-sans tracking-tight">
                   Registered Societies
                 </h2>
                 <span className="text-xs font-medium text-neutral-500">
@@ -161,7 +161,7 @@ export default async function AdminDashboardPage() {
                 {societiesList.map((soc) => (
                   <div
                     key={soc.slug}
-                    className="flex items-center justify-between p-3 rounded-xl border border-neutral-100 bg-neutral-50/50 hover:bg-neutral-50 transition-colors"
+                    className="flex items-center justify-between p-3 rounded-xl border border-neutral-100 bg-paper-2/60 hover:bg-paper-2 transition-colors"
                   >
                     <div className="flex items-center gap-3">
                       <div className="h-9 w-9 rounded-lg bg-white border border-neutral-200 flex items-center justify-center p-1.5 shrink-0">
@@ -184,7 +184,7 @@ export default async function AdminDashboardPage() {
                     <Link
                       href={soc.link}
                       target="_blank"
-                      className="text-neutral-400 hover:text-blue-700 transition-colors"
+                      className="text-neutral-400 hover:text-accent transition-colors"
                     >
                       <ExternalLink size={15} />
                     </Link>
@@ -197,53 +197,53 @@ export default async function AdminDashboardPage() {
           {/* Quick Actions & System Info */}
           <div className="space-y-6">
             <div className="rounded-2xl border border-neutral-200 bg-white p-6 sm:p-8 shadow-sm">
-              <h2 className="text-lg font-bold text-neutral-900 font-montserrat mb-4">
+              <h2 className="text-lg font-bold text-neutral-900 font-sans tracking-tight mb-4">
                 Quick Navigation
               </h2>
 
               <div className="space-y-3">
                 <Link
                   href="/office"
-                  className="flex items-center justify-between p-4 rounded-xl border border-neutral-200 hover:border-blue-400 hover:bg-blue-50/30 transition-all text-neutral-800 group"
+                  className="flex items-center justify-between p-4 rounded-xl border border-neutral-200 hover:border-ink hover:bg-paper-2 transition-all text-neutral-800 group"
                 >
                   <div className="flex items-center gap-3">
-                    <Users size={18} className="text-blue-700" />
+                    <Users size={18} className="text-ink" />
                     <span className="text-sm font-semibold">Office Bearers Directory</span>
                   </div>
-                  <ArrowRight size={16} className="text-neutral-400 group-hover:translate-x-1 group-hover:text-blue-700 transition-all" />
+                  <ArrowRight size={16} className="text-neutral-400 group-hover:translate-x-1 group-hover:text-accent transition-all" />
                 </Link>
 
                 <Link
                   href="/constitution"
-                  className="flex items-center justify-between p-4 rounded-xl border border-neutral-200 hover:border-blue-400 hover:bg-blue-50/30 transition-all text-neutral-800 group"
+                  className="flex items-center justify-between p-4 rounded-xl border border-neutral-200 hover:border-ink hover:bg-paper-2 transition-all text-neutral-800 group"
                 >
                   <div className="flex items-center gap-3">
-                    <Building2 size={18} className="text-blue-700" />
+                    <Building2 size={18} className="text-ink" />
                     <span className="text-sm font-semibold">Gymkhana Constitution</span>
                   </div>
-                  <ArrowRight size={16} className="text-neutral-400 group-hover:translate-x-1 group-hover:text-blue-700 transition-all" />
+                  <ArrowRight size={16} className="text-neutral-400 group-hover:translate-x-1 group-hover:text-accent transition-all" />
                 </Link>
 
                 <Link
                   href="/contact"
-                  className="flex items-center justify-between p-4 rounded-xl border border-neutral-200 hover:border-blue-400 hover:bg-blue-50/30 transition-all text-neutral-800 group"
+                  className="flex items-center justify-between p-4 rounded-xl border border-neutral-200 hover:border-ink hover:bg-paper-2 transition-all text-neutral-800 group"
                 >
                   <div className="flex items-center gap-3">
-                    <Settings size={18} className="text-blue-700" />
+                    <Settings size={18} className="text-ink" />
                     <span className="text-sm font-semibold">Feedback &amp; Inquiries</span>
                   </div>
-                  <ArrowRight size={16} className="text-neutral-400 group-hover:translate-x-1 group-hover:text-blue-700 transition-all" />
+                  <ArrowRight size={16} className="text-neutral-400 group-hover:translate-x-1 group-hover:text-accent transition-all" />
                 </Link>
               </div>
             </div>
 
             {/* Security Notice */}
-            <div className="rounded-2xl border border-blue-200 bg-blue-50/60 p-6">
-              <h3 className="text-sm font-bold text-blue-900 flex items-center gap-2 mb-2">
-                <ShieldCheck size={16} className="text-blue-700" />
+            <div className="rounded-2xl border border-ink/15 bg-paper-2 p-6">
+              <h3 className="text-sm font-bold text-ink flex items-center gap-2 mb-2">
+                <ShieldCheck size={16} className="text-ink" />
                 Security Notice
               </h3>
-              <p className="text-xs text-blue-800/80 leading-relaxed">
+              <p className="text-xs text-ink/70 leading-relaxed">
                 This area is restricted to authorized Students&apos; Gymkhana administrators.
                 All changes to data, event submissions, and announcements are logged.
               </p>

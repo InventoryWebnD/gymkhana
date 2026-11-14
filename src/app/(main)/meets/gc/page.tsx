@@ -1,12 +1,11 @@
 "use client";
 
-import type { ReactNode } from "react";
-import { motion, MotionConfig } from "framer-motion";
-import { Trophy } from "lucide-react";
-
-import CommonCarousel from "@/components/layout/CommonCarousel";
-import SectionShowcase from "@/components/ui/SectionShowcase";
-
+import { motion } from "framer-motion";
+import PageHero, { Sheet } from "@/components/design/PageHero";
+import { Container, Feature, SectionIntro } from "@/components/design/blocks";
+import { Reveal, easeOutExpo } from "@/components/design/primitives";
+import { photos } from "@/components/design/photos";
+import OtherMeets from "@/components/meets/OtherMeets";
 
 const results = [
   { rank: 1, department: "Civil", title: "Overall champion" },
@@ -14,121 +13,95 @@ const results = [
   { rank: 3, department: "Mechanical", title: "2nd runner-up" },
 ];
 
-const ease = [0.22, 1, 0.36, 1] as const;
+const STEPS = [
+  { title: "Compete", body: "Tournaments run under all three councils — Technical, Cultural and Sports." },
+  { title: "Score", body: "Winners and runners-up earn points for their department according to the standings." },
+  { title: "Crown", body: "The department with the highest aggregate across every event becomes General Champion." },
+];
 
-function Reveal({ children }: { children: ReactNode }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 16 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.1 }}
-      transition={{ duration: 0.6, ease }}
-    >
-      {children}
-    </motion.div>
-  );
-}
+// Podium order on wide screens: 2nd, 1st, 3rd.
+const PODIUM = [results[1], results[0], results[2]];
+const HEIGHT: Record<number, string> = { 1: "md:h-[360px]", 2: "md:h-[270px]", 3: "md:h-[210px]" };
 
 export default function GcMeetPage() {
   return (
-    <MotionConfig reducedMotion="user">
-      <main className="w-full overflow-hidden bg-white">
-        {/* HERO */}
-        <motion.section
-          initial={{ opacity: 0, scale: 1.015 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease }}
-          className="h-dvh w-full"
-        >
-          <CommonCarousel
-            commonName="GENERAL CHAMPIONSHIP"
-            heightClassName="h-dvh min-h-screen"
-            images={[
-              "/img/gc-carousel/gc1.jpg",
-              "/img/gc-carousel/gc2.jpg",
-              "/img/gc-carousel/gc3.jpg",
-              "/img/gc-carousel/gc4.jpg",
-              "/img/gc-carousel/gc5.jpg",
-              "/img/gc-carousel/gc6.jpg",
-              "/img/gc-carousel/gc7.jpg",
-            ]}
-          />
-        </motion.section>
+    <main className="w-full bg-ink">
+      <PageHero
+        eyebrow="Meet"
+        crumbs={[{ label: "Meets", href: "/meets/gc" }]}
+        title={["General", "Championship"]}
+        italic="Department pride, on the line."
+        intro="The annual inter-departmental championship — every year group, every council, one trophy."
+        photos={[photos.gcCrowd, photos.gcChampions, photos.gcFootball, photos.gcNightHoops, photos.dayHoops, photos.gcAwards]}
+        meta={[
+          { label: "Format", value: "Inter-departmental" },
+          { label: "Councils", value: "Tech · Cult · Sports" },
+          { label: "GC 2025", value: "Civil" },
+        ]}
+      />
 
-        {/* ABOUT */}
-        <Reveal>
-          <SectionShowcase
-            type="meet"
-            name="About General Championship"
-            image="/img/gc-carousel/gc7.jpg"
-            imageAlt="General Championship"
-            orientation="left"
-            description={[
+      <Sheet>
+        <Container className="py-24 md:py-32">
+          <Feature
+            index={1}
+            kicker="About"
+            name="About the GC"
+            tagline="One trophy, every council."
+            body={[
               "General Championship is the annual inter-departmental tournament where students strive to uphold their department's pride. It is a platform for students of different years to interact with each other in a healthy, competitive setting.",
               "Tournaments are held under three councils: Technical, Cultural and Sports. Each event has a winner, and points are awarded to winners and runners-up according to the standings. The department with the highest aggregate of points across all events is named the General Champion.",
             ]}
+            photo={photos.gcAwards}
           />
-        </Reveal>
 
-        {/* RESULTS */}
-        <section
-          id="results"
-          className="border-t border-slate-200 bg-slate-50 px-5 py-16 sm:px-8 md:py-24"
-        >
-          <div className="mx-auto max-w-4xl">
-            <Reveal>
-              <div className="mb-8 border-b border-slate-200 pb-6 md:mb-10">
-                <p className="mb-3 flex items-center gap-2 text-sm font-semibold text-[#1662ff]">
-                  <Trophy size={16} />
-                  General Championship
-                </p>
-                <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
-                  Results of GC 2025
-                </h2>
-              </div>
+          <ol className="grid gap-px overflow-hidden rounded-2xl bg-ink/15 md:grid-cols-3">
+            {STEPS.map((s, i) => (
+              <li key={s.title} className="bg-paper">
+                <Reveal delay={i * 0.08} className="flex h-full min-h-[200px] flex-col justify-between gap-8 p-6 md:p-8">
+                  <span className="font-mono text-[11px] tracking-[0.22em] text-accent">{String(i + 1).padStart(2, "0")}</span>
+                  <div>
+                    <h3 className="font-serif text-4xl">{s.title}</h3>
+                    <p className="mt-3 max-w-xs text-[14px] leading-relaxed text-ink/70">{s.body}</p>
+                  </div>
+                </Reveal>
+              </li>
+            ))}
+          </ol>
+        </Container>
 
-              <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
-                <table className="w-full min-w-[420px] text-left">
-                  <caption className="sr-only">
-                    General Championship 2025 final standings by department
-                  </caption>
-                  <thead className="bg-slate-50 text-sm text-slate-500">
-                    <tr>
-                      <th scope="col" className="w-20 px-6 py-4 font-semibold">
-                        Rank
-                      </th>
-                      <th scope="col" className="px-6 py-4 font-semibold">
-                        Department
-                      </th>
-                      <th scope="col" className="px-6 py-4 font-semibold">
-                        Title
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-200">
-                    {results.map((row) => (
-                      <tr key={row.rank}>
-                        <th
-                          scope="row"
-                          className="px-6 py-5 text-base font-semibold text-slate-900"
-                        >
-                          {row.rank}
-                        </th>
-                        <td className="px-6 py-5 text-base font-semibold text-slate-900">
-                          {row.department}
-                        </td>
-                        <td className="px-6 py-5 text-base text-slate-600">
-                          {row.title}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </Reveal>
-          </div>
-        </section>
-      </main>
-    </MotionConfig>
+        {/* Results podium */}
+        <Container className="pb-24 md:pb-32">
+          <SectionIntro
+            index="02"
+            label="Results"
+            title={["GC 2025", <em key="r">standings.</em>]}
+            blurb="Final standings by department after every technical, cultural and sports event was scored."
+          />
+          <ol aria-label="General Championship 2025 final standings" className="mt-14 flex flex-col gap-3 md:mt-20 md:grid md:grid-cols-3 md:items-end md:gap-5">
+            {PODIUM.map((r) => (
+              <li key={r.rank} className={r.rank === 1 ? "order-first md:order-none" : r.rank === 2 ? "order-2 md:order-none" : "order-3 md:order-none"}>
+                <motion.div
+                  initial={{ opacity: 0, y: 60 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 1, ease: easeOutExpo, delay: r.rank === 1 ? 0.25 : r.rank === 2 ? 0.1 : 0.4 }}
+                  className={`flex flex-col justify-between gap-6 rounded-[22px] p-6 md:p-8 ${HEIGHT[r.rank]} ${
+                    r.rank === 1 ? "bg-accent text-ink" : r.rank === 2 ? "bg-ink text-paper" : "bg-navy text-paper"
+                  }`}
+                >
+                  <div className="flex items-start justify-between">
+                    <span className="font-mono text-[11px] uppercase tracking-[0.22em] opacity-70">{r.title}</span>
+                    <span className="font-sans text-6xl font-semibold leading-none tracking-[-0.06em] lg:text-8xl">{r.rank}</span>
+                  </div>
+                  <p className="font-sans text-4xl font-semibold tracking-[-0.04em] md:text-[clamp(1.6rem,3.6vw,3rem)]">{r.department}</p>
+                </motion.div>
+              </li>
+            ))}
+          </ol>
+        </Container>
+      </Sheet>
+
+      <OtherMeets current="gc" index="03" />
+    </main>
   );
 }

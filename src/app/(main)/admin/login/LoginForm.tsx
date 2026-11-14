@@ -13,7 +13,7 @@ export default function LoginForm() {
       <div className="rounded-2xl border border-neutral-200 bg-white p-8 shadow-xl">
         {/* Header */}
         <div className="flex flex-col items-center text-center">
-          <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-neutral-50 p-2 shadow-inner border border-neutral-200 mb-4">
+          <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-paper p-2 shadow-inner border border-neutral-200 mb-4">
             <img
               src="/icons/iitbbs.png"
               alt="Gymkhana Logo"
@@ -21,12 +21,12 @@ export default function LoginForm() {
             />
           </div>
 
-          <div className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-blue-700 border border-blue-200 mb-2">
+          <div className="inline-flex items-center gap-1.5 rounded-full bg-paper-2 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-ink border border-ink/15 mb-2">
             <ShieldCheck size={13} />
             <span>Admin Portal</span>
           </div>
 
-          <h1 className="text-2xl font-bold tracking-tight text-neutral-900 font-montserrat">
+          <h1 className="text-2xl font-bold tracking-tight text-neutral-900 font-sans tracking-tight">
             STUDENTS&apos; GYMKHANA
           </h1>
 
@@ -68,7 +68,7 @@ export default function LoginForm() {
                 placeholder="Enter admin username"
                 defaultValue=""
                 disabled={isPending}
-                className="w-full rounded-xl border border-neutral-300 bg-white py-2.5 pl-10 pr-4 text-sm text-neutral-900 placeholder-neutral-400 focus:border-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700/10 transition-colors disabled:opacity-60"
+                className="w-full rounded-xl border border-neutral-300 bg-white py-2.5 pl-10 pr-4 text-sm text-neutral-900 placeholder-neutral-400 focus:border-ink focus:outline-none focus:ring-2 focus:ring-accent/20 transition-colors disabled:opacity-60"
               />
             </div>
           </div>
@@ -93,7 +93,7 @@ export default function LoginForm() {
                 placeholder="Enter admin password"
                 defaultValue=""
                 disabled={isPending}
-                className="w-full rounded-xl border border-neutral-300 bg-white py-2.5 pl-10 pr-10 text-sm text-neutral-900 placeholder-neutral-400 focus:border-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700/10 transition-colors disabled:opacity-60"
+                className="w-full rounded-xl border border-neutral-300 bg-white py-2.5 pl-10 pr-10 text-sm text-neutral-900 placeholder-neutral-400 focus:border-ink focus:outline-none focus:ring-2 focus:ring-accent/20 transition-colors disabled:opacity-60"
               />
               <button
                 type="button"
@@ -109,7 +109,7 @@ export default function LoginForm() {
           <button
             type="submit"
             disabled={isPending}
-            className="w-full mt-2 rounded-xl bg-blue-700 py-3 text-sm font-semibold text-white shadow hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2 cursor-pointer"
+            className="w-full mt-2 rounded-xl bg-ink py-3 text-sm font-semibold text-white shadow hover:bg-accent hover:text-ink focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 transition-all disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2 cursor-pointer"
           >
             {isPending ? (
               <>

@@ -1,15 +1,20 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
+import { Mail, Phone } from "lucide-react";
+import PageHero, { Sheet } from "@/components/design/PageHero";
+import { Container } from "@/components/design/blocks";
+import { MaskLines, Reveal, SectionLabel } from "@/components/design/primitives";
 
 type Member = { name: string; role: string; image: string; phone?: string; email?: string };
-type TeamSection = { title: string; members: Member[]; compact?: boolean };
+type TeamSection = { title: string; blurb: string; members: Member[]; compact?: boolean };
 const A = "/img/office26";
 
 const officeBearers: Member[] = [
     { name: "Dr. Chetan", role: "PRESIDENT", image: `${A}/pres.png`, phone: "06747135746", email: "president.sg@iitbbs.ac.in" },
     { name: "Mr. Santosh", role: "VICE PRESIDENT", image: `${A}/vp.png`, phone: "9353154278", email: "vpresident.sg@iitbbs.ac.in" },
-    { name: "Dr. Bankim Chandra Mahanta", role: "TREASURER", image: `${A}/tres.png`, phone: "6747135764", email: "treasurer.sg@iitbbs.ac.in" },
+    { name: "Dr. Bankim Chandra Mahanta", role: "TREASURER", image: `${A}/Tres.png`, phone: "6747135764", email: "treasurer.sg@iitbbs.ac.in" },
 ];
 const advisors: Member[] = [
     { name: "Dr. Snigdha Ghosh", role: "Social & Cultural", image: `${A}/faCult.png`, phone: "6747136924", email: "fasnc.sg@iitbbs.ac.in" },
@@ -63,66 +68,96 @@ const secretaries: Member[] = [
     { name: "Suryansh Banka", role: "The Fourth Wall Secretary", image: `${A}/Secretaries/4thWall.jpeg`, email: "secydrams.sg@iitbbs.ac.in" },
 ];
 const sections: TeamSection[] = [
-    { title: "OFFICE BEARERS 2026–2027", members: officeBearers },
-    { title: "ADVISORY COUNCIL", members: advisors },
-    { title: "SPORTS INSTRUCTORS", members: instructors },
-    { title: "GENERAL SECRETARIES", members: generalSecretaries },
-    { title: "EXECUTIVE COUNCIL", members: executiveCouncil },
-    { title: "SECRETARIES", members: secretaries, compact: true },
+    { title: "Office Bearers", blurb: "President, Vice President and Treasurer for 2026–27.", members: officeBearers },
+    { title: "Advisory Council", blurb: "Faculty advisors for each of the three councils.", members: advisors },
+    { title: "General Secretaries", blurb: "Elected student heads of the three councils.", members: generalSecretaries },
+    { title: "Executive Council", blurb: "Elected representatives of UG, PG and PhD students.", members: executiveCouncil },
+    { title: "Sports Instructors", blurb: "The coaches and trainers behind every team.", members: instructors },
+    { title: "Secretaries", blurb: "One for every sport and society.", members: secretaries, compact: true },
 ];
 
-function MemberCard({ member }: { member: Member }) {
+const titleCase = (s: string) => s.toLowerCase().replace(/(^|[\s&-])\w/g, (m) => m.toUpperCase());
+
+function MemberCard({ member, compact }: { member: Member; compact?: boolean }) {
     const [imageError, setImageError] = useState(false);
+    const role = member.role === member.role.toUpperCase() ? titleCase(member.role) : member.role;
     return (
-        <article className="group flex h-full flex-col overflow-hidden border border-neutral-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
-            <div className="relative flex h-[300px] items-center justify-center overflow-hidden bg-neutral-100 p-3 sm:h-[330px]">
+        <article className="group flex h-full flex-col">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-paper-2">
                 {!imageError ? (
-                    <img src={member.image} alt={member.name} loading="lazy" onError={() => setImageError(true)} className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.02]" />
+                    <Image
+                        src={member.image}
+                        alt={member.name}
+                        fill
+                        sizes={compact ? "(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw" : "(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"}
+                        onError={() => setImageError(true)}
+                        className="object-cover object-top transition-transform duration-[1.2s] ease-out-expo group-hover:scale-[1.05]"
+                    />
                 ) : (
-                    <div className="flex h-full w-full flex-col items-center justify-center gap-3 text-neutral-500">
-                        <span className="text-5xl font-bold">{member.name.charAt(0)}</span>
-                        <span className="text-xs">Image unavailable</span>
+                    <div className="flex h-full w-full items-center justify-center bg-ink font-serif text-6xl text-paper">
+                        {member.name.charAt(0)}
                     </div>
                 )}
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent px-4 pb-5 pt-12 text-white">
-                    <h3 className="text-center text-lg font-bold leading-snug">{member.name}</h3>
-                    <p className="mt-1 text-center text-xs font-semibold uppercase tracking-wide text-neutral-200">{member.role}</p>
+                {/* contact actions slide up on hover (always visible on touch) */}
+                <div className="absolute inset-x-2 bottom-2 flex gap-1.5 transition-all duration-500 ease-out-expo pointer-fine:translate-y-3 pointer-fine:opacity-0 pointer-fine:group-hover:translate-y-0 pointer-fine:group-hover:opacity-100 pointer-fine:group-focus-within:translate-y-0 pointer-fine:group-focus-within:opacity-100">
+                    {member.phone && (
+                        <a href={`tel:${member.phone.trim()}`} aria-label={`Call ${member.name}`} className="flex h-10 w-10 items-center justify-center rounded-full bg-paper/90 text-ink backdrop-blur transition-colors hover:bg-accent">
+                            <Phone size={15} />
+                        </a>
+                    )}
+                    {member.email && (
+                        <a href={`mailto:${member.email}`} aria-label={`Email ${member.name}`} className="flex h-10 w-10 items-center justify-center rounded-full bg-paper/90 text-ink backdrop-blur transition-colors hover:bg-accent">
+                            <Mail size={15} />
+                        </a>
+                    )}
                 </div>
             </div>
-            <div className="flex flex-1 flex-col items-center px-4 py-5 text-center">
-                <p className="text-sm font-semibold text-neutral-800">{member.role}</p>
-                <p className="mt-2 text-xs tracking-wide text-neutral-500">STUDENTS&apos; GYMKHANA</p>
-                <p className="text-xs tracking-wide text-neutral-500">IIT BHUBANESHWAR</p>
-                <div className="mt-auto flex items-center justify-center gap-4 pt-5">
-                    {member.phone && <a href={`tel:${member.phone.trim()}`} aria-label={`Call ${member.name}`} title="Call" className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-100 text-neutral-800 transition hover:bg-blue-700 hover:text-white">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.2 18a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.09 3.18 2 2 0 0 1 4.08 1h3a2 2 0 0 1 2 1.72c.12.96.35 1.9.7 2.8a2 2 0 0 1-.45 2.11L8.06 8.9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.35 1.84.58 2.8.7A2 2 0 0 1 22 16.92Z" /></svg>
-                    </a>}
-                    {member.email && <a href={`mailto:${member.email}`} aria-label={`Email ${member.name}`} title="Email" className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-100 text-neutral-800 transition hover:bg-blue-700 hover:text-white">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path strokeLinecap="round" strokeLinejoin="round" d="m3 7 9 6 9-6" /></svg>
-                    </a>}
-                </div>
-            </div>
+            <h3 className={`mt-4 font-sans font-semibold leading-tight tracking-[-0.03em] ${compact ? "text-base md:text-lg" : "text-lg md:text-2xl"}`}>{member.name}</h3>
+            <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-ink/55">{role}</p>
         </article>
     );
 }
 
 export default function OfficePage() {
+    const total = sections.reduce((n, s) => n + s.members.length, 0);
     return (
-        <main className="min-h-screen bg-white pb-16 pt-24 text-neutral-900 md:pt-28">
-            <div className="mx-auto max-w-[1500px] space-y-20 px-5 sm:px-8 lg:px-12">
-                {sections.map((section, index) => (
-                    <section key={section.title}>
-                        <header className="mb-10 text-center md:mb-12">
-                            <h1 className={`font-bold tracking-wide ${index === 0 ? "text-2xl sm:text-3xl lg:text-4xl" : "text-xl sm:text-2xl lg:text-3xl"}`}>{section.title}</h1>
-                            <div className="mx-auto mt-4 flex w-36 items-center"><span className="h-[2px] flex-1 bg-neutral-300" /><span className="h-1 w-12 bg-blue-700" /><span className="h-[2px] flex-1 bg-neutral-300" /></div>
-                        </header>
-                        <div className={`grid grid-cols-1 gap-6 sm:grid-cols-2 ${section.compact ? "lg:grid-cols-4 xl:grid-cols-5" : "lg:grid-cols-3 xl:grid-cols-4"}`}>
-                            {section.members.map((member) => <MemberCard key={`${section.title}-${member.name}-${member.role}`} member={member} />)}
-                        </div>
-                    </section>
-                ))}
-            </div>
-            <button type="button" aria-label="Back to top" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="fixed bottom-5 right-5 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-blue-700 text-white shadow-lg transition hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-400">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" className="h-6 w-6" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="m6 14 6-6 6 6" /></svg>
-            </button>
-        </main>)}
+        <main className="w-full bg-ink">
+            <PageHero
+                eyebrow="Office"
+                title={["The Office"]}
+                italic="The people who run the Gymkhana, 2026–27."
+                intro="Office bearers, faculty advisors, elected representatives, coaches and the secretaries of every sport and society."
+                meta={[
+                    { label: "People", value: String(total) },
+                    { label: "Email", value: "office.gymkhana@iitbbs.ac.in" },
+                ]}
+            />
+            <Sheet>
+                <Container className="py-24 md:py-32">
+                    <div className="space-y-20 md:space-y-32">
+                        {sections.map((section, index) => (
+                            <section key={section.title} className="grid gap-8 lg:grid-cols-12 lg:gap-10">
+                                <div className="lg:col-span-3">
+                                    <div className="lg:sticky lg:top-28">
+                                        <SectionLabel index={String(index + 1).padStart(2, "0")} className="text-ink/60">
+                                            {String(section.members.length).padStart(2, "0")} people
+                                        </SectionLabel>
+                                        <MaskLines as="h2" className="mt-5 font-serif text-4xl leading-[0.95] md:text-5xl" lines={[section.title]} />
+                                        <Reveal><p className="mt-3 max-w-xs text-[14px] leading-relaxed text-ink/65">{section.blurb}</p></Reveal>
+                                    </div>
+                                </div>
+                                <div className={`grid grid-cols-2 gap-x-4 gap-y-10 md:gap-x-6 lg:col-span-9 ${section.compact ? "sm:grid-cols-3 lg:grid-cols-5" : "sm:grid-cols-3 lg:grid-cols-4"}`}>
+                                    {section.members.map((member, i) => (
+                                        <Reveal key={`${section.title}-${member.name}-${member.role}`} delay={Math.min(i, 8) * 0.04} y={24}>
+                                            <MemberCard member={member} compact={section.compact} />
+                                        </Reveal>
+                                    ))}
+                                </div>
+                            </section>
+                        ))}
+                    </div>
+                </Container>
+            </Sheet>
+        </main>
+    );
+}
